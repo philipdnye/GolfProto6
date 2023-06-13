@@ -22,15 +22,16 @@ struct ScoreEntryCompetitorRow: View {
                 Capsule()
                   
                     .fill(.blue)
-                    .opacity(0.5)
-                    .frame(width: 100, height: 22)
+                    .opacity(0.8)
+                    .frame(width: 120, height: 32)
                     
                     .overlay(
                         Text(scoreEntryVM.currentGame.game.SixPointString(currentGF: currentGF, holeIndex: scoreEntryVM.holeIndex)[competitorIndex])
                             .foregroundColor(.white)
+                            .font(.title3)
                     )
                 
-                    .offset(x:-125, y:30)
+                    .offset(x:-115, y:40)
                 
                 
                 

@@ -145,7 +145,7 @@ struct ScoreEntryScreen: View {
                         .frame(width: geo.size.width * 0.48, alignment: .trailing)
                         .offset(x:geo.size.width * 0.02, y: geo.size.height * 0.02)
                 }
-                .font(.title3)
+                .font(.body)
                 .foregroundColor(darkTeal)
                 .zIndex(0)
                 
