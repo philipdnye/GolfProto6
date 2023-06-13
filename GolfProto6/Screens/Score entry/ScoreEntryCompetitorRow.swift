@@ -18,48 +18,9 @@ struct ScoreEntryCompetitorRow: View {
     var body: some View {
        
         ZStack{
-            if currentGF.format == .sixPoint {
-                Capsule()
-                  
-                    .fill(.blue)
-                    .opacity(0.8)
-                    .frame(width: 120, height: 32)
-                    
-                    .overlay(
-                        Text(scoreEntryVM.currentGame.game.SixPointString(currentGF: currentGF, holeIndex: scoreEntryVM.holeIndex)[competitorIndex])
-                            .foregroundColor(.white)
-                            .font(.title3)
-                    )
-                
-                    .offset(x:-115, y:40)
-                
-                
-                
-                
-                
-//                Text(scoreEntryVM.currentGame.game.SixPointString(currentGF: currentGF, holeIndex: scoreEntryVM.holeIndex)[competitorIndex])
-//                    .frame(width: 80, height: 16)
-//                    .padding(2)
-//
-//                    .background(.yellow)
-//                    .overlay(
-//                        RoundedRectangle(cornerRadius: 16)
-//                            .stroke(darkTeal, lineWidth: 1)
-//
-//                    )
-//                    .offset(x:-110, y:30)
-                    
-            }
-            
-            
-                
+              
                 HStack(spacing: 5){
-                
-                
-                
-                
-                //Text(scoreEntryVM.currentGame.game.competitorArray[competitorIndex].FirstName())
-                // Text(scoreEntryVM.currentGame.game.competitorArray[competitorIndex].LastName().prefix(1).capitalized)
+
                 
                 Text(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF)[competitorIndex].FirstName())
                 Text(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF)[competitorIndex].LastName().prefix(1).capitalized)

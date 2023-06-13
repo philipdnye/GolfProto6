@@ -571,14 +571,14 @@ struct ScoreEntryScreen: View {
             }
             
             
-            if scoreEntryVM.zipButton == false {
+            if scoreEntryVM.zipButton == false && currentGF.format == .sixPoint {
                 ToolbarItem(placement: .navigationBarLeading){
                     showZipPointsButton
                         .frame(width: 40)
                 }
             }
             
-            if scoreEntryVM.zipButton {
+            if scoreEntryVM.zipButton && currentGF.format == .sixPoint {
                 ToolbarItem(placement: .navigationBarLeading){
                     showTotalPointsButton
                         .frame(width: 40)

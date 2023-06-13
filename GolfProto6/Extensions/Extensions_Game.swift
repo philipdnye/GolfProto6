@@ -845,7 +845,7 @@ extension Game {
         let sixPointGrossScores_CompetitorC = self.SortedCompetitors(currentGF: currentGF)[2].competitorScoresArray
         var holesPlayed = 0
         var netScores = [0,0,0]
-       // var holeResult: Int = 0
+      
         var totalPoints = [0,0,0]
         var holePoints: [[Int]] = Array(repeating: [0,0,0], count: 18)
         
@@ -930,9 +930,9 @@ extension Game {
         var player2NetPoints: String = "0"
         var player3NetPoints: String = "0"
         
-        var player1TotalPoints: String = ""
-        var player2TotalPoints: String = ""
-        var player3TotalPoints: String = ""
+//        var player1TotalPoints: String = ""
+//        var player2TotalPoints: String = ""
+//        var player3TotalPoints: String = ""
         
         
         if totalPoints[0] - lowPoints != 0 {
@@ -955,61 +955,40 @@ extension Game {
         
         
         
-        switch Int(player1NetPoints){
-        case _ where Int(player1NetPoints) ?? 0 == 0:
-            player1TotalPoints =  "\(player1NetPoints)     (\(totalPoints[0]))"
-        case 1:
-            player1TotalPoints =  "\(player1NetPoints) pt  (\(totalPoints[0]))"
-        default:
-            player1TotalPoints =  "\(player1NetPoints) pts (\(totalPoints[0]))"
-        }
-       
-        switch Int(player2NetPoints){
-        case _ where Int(player2NetPoints) ?? 0 == 0:
-            player2TotalPoints =  "\(player2NetPoints)     (\(totalPoints[1]))"
-        case 1:
-            player2TotalPoints =  "\(player2NetPoints) pt  (\(totalPoints[1]))"
-        default:
-            player2TotalPoints =  "\(player2NetPoints) pts (\(totalPoints[1]))"
-        }
-        
-        switch Int(player3NetPoints){
-        case _ where Int(player3NetPoints) ?? 0 == 0:
-            player3TotalPoints =  "\(player3NetPoints)     (\(totalPoints[2]))"
-        case 1:
-            player3TotalPoints =  "\(player3NetPoints) pt  (\(totalPoints[2]))"
-        default:
-            player3TotalPoints =  "\(player3NetPoints) pts (\(totalPoints[2]))"
-        }
-        
-        
-        
-        
-        
-        
-        
-//        if Int(player1NetPoints) ?? 0>0{
-//            player1TotalPoints =  "\(player1NetPoints) pts (\(totalPoints[0]))"
-//        } else {
+//        player1TotalPoints
+//
+//
+//        switch Int(player1NetPoints){
+//        case _ where Int(player1NetPoints) ?? 0 == 0:
 //            player1TotalPoints =  "\(player1NetPoints)     (\(totalPoints[0]))"
+//        case 1:
+//            player1TotalPoints =  "\(player1NetPoints) pt  (\(totalPoints[0]))"
+//        default:
+//            player1TotalPoints =  "\(player1NetPoints) pts (\(totalPoints[0]))"
 //        }
 //
-//        if Int(player2NetPoints) ?? 0>0{
-//            player2TotalPoints =  "\(player2NetPoints) pts (\(totalPoints[1]))"
-//        } else {
+//        switch Int(player2NetPoints){
+//        case _ where Int(player2NetPoints) ?? 0 == 0:
 //            player2TotalPoints =  "\(player2NetPoints)     (\(totalPoints[1]))"
+//        case 1:
+//            player2TotalPoints =  "\(player2NetPoints) pt  (\(totalPoints[1]))"
+//        default:
+//            player2TotalPoints =  "\(player2NetPoints) pts (\(totalPoints[1]))"
 //        }
 //
-//        if Int(player3NetPoints) ?? 0>0{
-//            player3TotalPoints =  "\(player3NetPoints) pts (\(totalPoints[2]))"
-//        } else {
+//        switch Int(player3NetPoints){
+//        case _ where Int(player3NetPoints) ?? 0 == 0:
 //            player3TotalPoints =  "\(player3NetPoints)     (\(totalPoints[2]))"
+//        case 1:
+//            player3TotalPoints =  "\(player3NetPoints) pt  (\(totalPoints[2]))"
+//        default:
+//            player3TotalPoints =  "\(player3NetPoints) pts (\(totalPoints[2]))"
 //        }
+        
+   
        
         
-       
-        
-        return [player1TotalPoints, player2TotalPoints, player3TotalPoints, holesRemainingString, String(holePoints[holeIndex][0]),String(holePoints[holeIndex][1]), String(holePoints[holeIndex][2])]
+        return [String(totalPoints[0]), String(totalPoints[1]), String(totalPoints[2]), holesRemainingString, String(holePoints[holeIndex][0]),String(holePoints[holeIndex][1]), String(holePoints[holeIndex][2]), String(player1NetPoints), String(player2NetPoints), String(player3NetPoints)]
     }// sixpoint func
     
     

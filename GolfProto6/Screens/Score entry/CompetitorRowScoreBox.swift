@@ -48,7 +48,38 @@ struct CompetitorRowScoreBox: View {
             }
            //*****************
             
-            
+            if currentGF.format == .sixPoint && scoreEntryVM.zipButton {
+                Text(scoreEntryVM.currentGame.game.SixPointString(currentGF: currentGF, holeIndex: scoreEntryVM.holeIndex)[competitorIndex+7])
+                // Text("32")
+                    .frame(width:35, height:35)
+                
+                    .padding(1)
+                    .background(.blue)
+                    //.opacity(0.75)
+                
+                    .clipShape(Circle())
+                    .foregroundColor(.white)
+                    .font(.headline)
+//                    .foregroundColor(darkTeal)
+                    .offset(x: -30, y: 30)
+                    .zIndex(1)
+            }
+            if currentGF.format == .sixPoint && scoreEntryVM.zipButton == false {
+                Text(scoreEntryVM.currentGame.game.SixPointString(currentGF: currentGF, holeIndex: scoreEntryVM.holeIndex)[competitorIndex])
+                // Text("32")
+                    .frame(width:35, height:35)
+                
+                    .padding(1)
+                    .background(.blue)
+                    //.opacity(0.75)
+                
+                    .clipShape(Circle())
+                    .foregroundColor(.white)
+                    .font(.headline)
+//                    .foregroundColor(darkTeal)
+                    .offset(x: -30, y: 30)
+                    .zIndex(1)
+            }
             
             
             
