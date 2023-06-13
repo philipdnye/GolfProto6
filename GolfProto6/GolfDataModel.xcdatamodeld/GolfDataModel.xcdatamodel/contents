@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Club" representedClassName="Club" syncable="YES">
+        <attribute name="addressLine1" optional="YES" attributeType="String"/>
+        <attribute name="addressLine2" optional="YES" attributeType="String"/>
+        <attribute name="addressLine3" optional="YES" attributeType="String"/>
+        <attribute name="addressLine4" optional="YES" attributeType="String"/>
+        <attribute name="clubImage" optional="YES" attributeType="Transformable" valueTransformerName="UIImageTransformer" customClassName="UIImage"/>
+        <attribute name="distMetric" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="postCode" optional="YES" attributeType="String"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="club" inverseEntity="Course"/>
+    </entity>
+    <entity name="Competitor" representedClassName="Competitor" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="UIColorTransformer" customClassName="UIColor"/>
+        <attribute name="courseHandicap" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="courseRating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="diffTeesXShots" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="handicapAllowance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="handicapIndex" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="playingHandicap" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shotsRecdMatch" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="slopeRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="team" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teeBoxColour" optional="YES" attributeType="String"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="competitors" inverseEntity="Game"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="competitors" inverseEntity="Player"/>
+        <relationship name="scores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CompetitorScore" inverseName="competitor" inverseEntity="CompetitorScore"/>
+        <relationship name="teeBox" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="competitors" inverseEntity="TeeBox"/>
+    </entity>
+    <entity name="CompetitorScore" representedClassName="CompetitorScore" syncable="YES" codeGenerationType="class">
+        <attribute name="distance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="grossScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hole" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="par" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scoreCommitted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="shotsRecdHoleMatch" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shotsRecdHoleStroke" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="strokeIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="competitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Competitor" inverseName="scores" inverseEntity="Competitor"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="courses" inverseEntity="Club"/>
+        <relationship name="teeBoxes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="course" inverseEntity="TeeBox"/>
+    </entity>
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="clubName" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="distMetric" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dTB_Color" optional="YES" attributeType="String"/>
+        <attribute name="dTB_courseRating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dTB_slopeRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dTB_teeBoxColour" optional="YES" attributeType="Transformable" valueTransformerName="UIColorTransformer" customClassName="UIColor"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="finished" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gameFormat" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="handicapFormat" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="playFormat" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scoreFormat" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="started" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="startingHole" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="competitors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competitor" inverseName="game" inverseEntity="Competitor"/>
+        <relationship name="defaultTeeBox" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="game" inverseEntity="TeeBox"/>
+        <relationship name="diffTeesTeeBox" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="gameForDiffTees" inverseEntity="TeeBox"/>
+        <relationship name="scoreEntryTeeBox" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="gameForScoreEntry" inverseEntity="TeeBox"/>
+        <relationship name="teamScores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeamScore" inverseName="game" inverseEntity="TeamScore"/>
+        <relationship name="teamShots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeamShots" inverseName="game" inverseEntity="TeamShots"/>
+        <relationship name="teamTeeBoxes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeamTeeBox" inverseName="game" inverseEntity="TeamTeeBox"/>
+    </entity>
+    <entity name="Handicap" representedClassName="Handicap" syncable="YES" codeGenerationType="class">
+        <attribute name="handicapIndex" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="handicap" inverseEntity="Player"/>
+    </entity>
+    <entity name="Hole" representedClassName="Hole" syncable="YES" codeGenerationType="class">
+        <attribute name="distance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="par" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="strokeIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="teeBox" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeeBox" inverseName="holes" inverseEntity="TeeBox"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="mobile" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" valueTransformerName="UIImageTransformer" customClassName="UIImage"/>
+        <attribute name="selectedForGame" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="competitors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competitor" inverseName="player" inverseEntity="Competitor"/>
+        <relationship name="handicap" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Handicap" inverseName="player" inverseEntity="Handicap"/>
+    </entity>
+    <entity name="TeamScore" representedClassName="TeamScore" syncable="YES" codeGenerationType="class">
+        <attribute name="distance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="grossScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hole" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="par" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scoreCommitted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="shotsRecdHoleMatch" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shotsRecdHoleStroke" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="strokeIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="team" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="teamScores" inverseEntity="Game"/>
+    </entity>
+    <entity name="TeamShots" representedClassName="TeamShots" syncable="YES" codeGenerationType="class">
+        <attribute name="diffTeesXShots" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="playingHandicap" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shotsRecd" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="team" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="teamShots" inverseEntity="Game"/>
+    </entity>
+    <entity name="TeamTeeBox" representedClassName="TeamTeeBox" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="UIColorTransformer" customClassName="UIColor"/>
+        <attribute name="courseRating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="slopeRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="team" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teeBoxColour" optional="YES" attributeType="String"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="teamTeeBoxes" inverseEntity="Game"/>
+    </entity>
+    <entity name="TeeBox" representedClassName="TeeBox" syncable="YES">
+        <attribute name="colour" optional="YES" attributeType="String"/>
+        <attribute name="courseRating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="slopeRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teeBoxColor" optional="YES" attributeType="Transformable" valueTransformerName="UIColorTransformer" customClassName="UIColor"/>
+        <relationship name="competitors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competitor" inverseName="teeBox" inverseEntity="Competitor"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="teeBoxes" inverseEntity="Course"/>
+        <relationship name="game" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="defaultTeeBox" inverseEntity="Game"/>
+        <relationship name="gameForDiffTees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="diffTeesTeeBox" inverseEntity="Game"/>
+        <relationship name="gameForScoreEntry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="scoreEntryTeeBox" inverseEntity="Game"/>
+        <relationship name="holes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hole" inverseName="teeBox" inverseEntity="Hole"/>
+    </entity>
+</model>

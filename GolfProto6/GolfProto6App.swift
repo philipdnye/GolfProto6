@@ -11,7 +11,7 @@ import SwiftUI
 struct GolfProto6App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
         }
     }
 }

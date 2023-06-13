@@ -8,17 +8,237 @@
 
 /* Begin PBXBuildFile section */
 		D40761CE2A3890F4009BFF1E /* GolfProto6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761CD2A3890F4009BFF1E /* GolfProto6App.swift */; };
-		D40761D02A3890F4009BFF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761CF2A3890F4009BFF1E /* ContentView.swift */; };
 		D40761D22A3890F5009BFF1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40761D12A3890F5009BFF1E /* Assets.xcassets */; };
 		D40761D52A3890F5009BFF1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40761D42A3890F5009BFF1E /* Preview Assets.xcassets */; };
+		D40761DD2A38916E009BFF1E /* Bespoke colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761DC2A38916E009BFF1E /* Bespoke colours.swift */; };
+		D40761F22A38917F009BFF1E /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761DF2A38917F009BFF1E /* PreviewProvider.swift */; };
+		D40761F32A38917F009BFF1E /* GameFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E12A38917F009BFF1E /* GameFormats.swift */; };
+		D40761F42A38917F009BFF1E /* Extensions_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E32A38917F009BFF1E /* Extensions_Color.swift */; };
+		D40761F52A38917F009BFF1E /* Extensions_TeamScoreArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E42A38917F009BFF1E /* Extensions_TeamScoreArray.swift */; };
+		D40761F62A38917F009BFF1E /* Extensions_TeeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E52A38917F009BFF1E /* Extensions_TeeBox.swift */; };
+		D40761F72A38917F009BFF1E /* Extensions_CompetitorScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E62A38917F009BFF1E /* Extensions_CompetitorScore.swift */; };
+		D40761F82A38917F009BFF1E /* Extensions_Competitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E72A38917F009BFF1E /* Extensions_Competitor.swift */; };
+		D40761F92A38917F009BFF1E /* Extensions_TeamScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E82A38917F009BFF1E /* Extensions_TeamScore.swift */; };
+		D40761FA2A38917F009BFF1E /* Extensions_HandicapArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761E92A38917F009BFF1E /* Extensions_HandicapArray.swift */; };
+		D40761FB2A38917F009BFF1E /* Extensions_CompetitorScoreArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761EA2A38917F009BFF1E /* Extensions_CompetitorScoreArray.swift */; };
+		D40761FC2A38917F009BFF1E /* Extensions_Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761EB2A38917F009BFF1E /* Extensions_Game.swift */; };
+		D40761FD2A38917F009BFF1E /* Extensions_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761EC2A38917F009BFF1E /* Extensions_String.swift */; };
+		D40761FE2A38917F009BFF1E /* Extensions_HoleArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761ED2A38917F009BFF1E /* Extensions_HoleArray.swift */; };
+		D40761FF2A38917F009BFF1E /* Extensions_Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761EE2A38917F009BFF1E /* Extensions_Player.swift */; };
+		D40762002A38917F009BFF1E /* Extensions_NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761EF2A38917F009BFF1E /* Extensions_NSNumber.swift */; };
+		D40762012A38917F009BFF1E /* Extensions_Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761F02A38917F009BFF1E /* Extensions_Club.swift */; };
+		D40762022A38917F009BFF1E /* Extensions_Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40761F12A38917F009BFF1E /* Extensions_Integer.swift */; };
+		D40762052A38918A009BFF1E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762042A38918A009BFF1E /* ImagePicker.swift */; };
+		D40762082A3891C9009BFF1E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762072A3891C9009BFF1E /* CoreDataManager.swift */; };
+		D40762182A3891D4009BFF1E /* TeeBox+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620A2A3891D4009BFF1E /* TeeBox+CoreDataProperties.swift */; };
+		D40762192A3891D4009BFF1E /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620B2A3891D4009BFF1E /* Player+CoreDataClass.swift */; };
+		D407621A2A3891D4009BFF1E /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620C2A3891D4009BFF1E /* Game+CoreDataClass.swift */; };
+		D407621B2A3891D4009BFF1E /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620D2A3891D4009BFF1E /* Club+CoreDataClass.swift */; };
+		D407621C2A3891D4009BFF1E /* TeamTeeBox+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620E2A3891D4009BFF1E /* TeamTeeBox+CoreDataProperties.swift */; };
+		D407621D2A3891D4009BFF1E /* Competitor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407620F2A3891D4009BFF1E /* Competitor+CoreDataProperties.swift */; };
+		D407621E2A3891D4009BFF1E /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762102A3891D4009BFF1E /* Course+CoreDataClass.swift */; };
+		D407621F2A3891D4009BFF1E /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762112A3891D4009BFF1E /* Player+CoreDataProperties.swift */; };
+		D40762202A3891D4009BFF1E /* TeeBox+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762122A3891D4009BFF1E /* TeeBox+CoreDataClass.swift */; };
+		D40762212A3891D4009BFF1E /* Competitor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762132A3891D4009BFF1E /* Competitor+CoreDataClass.swift */; };
+		D40762222A3891D4009BFF1E /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762142A3891D4009BFF1E /* Course+CoreDataProperties.swift */; };
+		D40762232A3891D4009BFF1E /* TeamTeeBox+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762152A3891D4009BFF1E /* TeamTeeBox+CoreDataClass.swift */; };
+		D40762242A3891D4009BFF1E /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762162A3891D4009BFF1E /* Game+CoreDataProperties.swift */; };
+		D40762252A3891D4009BFF1E /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762172A3891D4009BFF1E /* Club+CoreDataProperties.swift */; };
+		D40762652A3891E6009BFF1E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762272A3891E6009BFF1E /* SettingsScreen.swift */; };
+		D40762662A3891E6009BFF1E /* ScoreEntryTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762292A3891E6009BFF1E /* ScoreEntryTeamRow.swift */; };
+		D40762672A3891E6009BFF1E /* CompetitorRowScoreBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622A2A3891E6009BFF1E /* CompetitorRowScoreBox.swift */; };
+		D40762682A3891E6009BFF1E /* ScoreEntryCompetitorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622B2A3891E6009BFF1E /* ScoreEntryCompetitorRow.swift */; };
+		D40762692A3891E6009BFF1E /* TeamRowScoreBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622C2A3891E6009BFF1E /* TeamRowScoreBox.swift */; };
+		D407626A2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622D2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift */; };
+		D407626B2A3891E6009BFF1E /* HoleNavigatorPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622E2A3891E6009BFF1E /* HoleNavigatorPopUp.swift */; };
+		D407626C2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407622F2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift */; };
+		D407626D2A3891E6009BFF1E /* ScoreEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762302A3891E6009BFF1E /* ScoreEntryScreen.swift */; };
+		D407626E2A3891E6009BFF1E /* CourseListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762332A3891E6009BFF1E /* CourseListScreen.swift */; };
+		D407626F2A3891E6009BFF1E /* EditCourseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762342A3891E6009BFF1E /* EditCourseScreen.swift */; };
+		D40762702A3891E6009BFF1E /* AddCoursesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762352A3891E6009BFF1E /* AddCoursesScreen.swift */; };
+		D40762712A3891E6009BFF1E /* CourseListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762362A3891E6009BFF1E /* CourseListRowItem.swift */; };
+		D40762722A3891E6009BFF1E /* EditTeeBoxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762382A3891E6009BFF1E /* EditTeeBoxScreen.swift */; };
+		D40762732A3891E6009BFF1E /* TeeBoxListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762392A3891E6009BFF1E /* TeeBoxListScreen.swift */; };
+		D40762742A3891E6009BFF1E /* TeeBoxListScreen_1Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407623A2A3891E6009BFF1E /* TeeBoxListScreen_1Course.swift */; };
+		D40762752A3891E6009BFF1E /* TeeBoxListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407623B2A3891E6009BFF1E /* TeeBoxListRowItem.swift */; };
+		D40762762A3891E6009BFF1E /* TeeBoxDistancesSubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407623C2A3891E6009BFF1E /* TeeBoxDistancesSubScreen.swift */; };
+		D40762772A3891E6009BFF1E /* AddTeeBoxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407623D2A3891E6009BFF1E /* AddTeeBoxScreen.swift */; };
+		D40762782A3891E6009BFF1E /* HolesLayout9.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407623F2A3891E6009BFF1E /* HolesLayout9.swift */; };
+		D40762792A3891E6009BFF1E /* HoleListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762402A3891E6009BFF1E /* HoleListScreen.swift */; };
+		D407627A2A3891E6009BFF1E /* HolesLayoutTotals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762412A3891E6009BFF1E /* HolesLayoutTotals.swift */; };
+		D407627B2A3891E6009BFF1E /* ClubListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762432A3891E6009BFF1E /* ClubListRowItem.swift */; };
+		D407627C2A3891E6009BFF1E /* EditClubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762442A3891E6009BFF1E /* EditClubScreen.swift */; };
+		D407627D2A3891E6009BFF1E /* ClubListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762452A3891E6009BFF1E /* ClubListScreen.swift */; };
+		D407627E2A3891E6009BFF1E /* AddClubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762462A3891E6009BFF1E /* AddClubScreen.swift */; };
+		D407627F2A3891E6009BFF1E /* PlayerListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762482A3891E6009BFF1E /* PlayerListScreen.swift */; };
+		D40762802A3891E6009BFF1E /* PlayerListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762492A3891E6009BFF1E /* PlayerListRowItem.swift */; };
+		D40762812A3891E6009BFF1E /* AddHandicapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407624A2A3891E6009BFF1E /* AddHandicapScreen.swift */; };
+		D40762822A3891E6009BFF1E /* AddPlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407624B2A3891E6009BFF1E /* AddPlayerScreen.swift */; };
+		D40762832A3891E6009BFF1E /* PlayerDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407624C2A3891E6009BFF1E /* PlayerDetailScreen.swift */; };
+		D40762842A3891E6009BFF1E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407624D2A3891E6009BFF1E /* HomeView.swift */; };
+		D40762852A3891E6009BFF1E /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407624E2A3891E6009BFF1E /* MainScreen.swift */; };
+		D40762862A3891E6009BFF1E /* TeamsABPlayingHandicaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762512A3891E6009BFF1E /* TeamsABPlayingHandicaps.swift */; };
+		D40762872A3891E6009BFF1E /* TeamsABExtraShots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762522A3891E6009BFF1E /* TeamsABExtraShots.swift */; };
+		D40762882A3891E6009BFF1E /* GameSummaryForDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762532A3891E6009BFF1E /* GameSummaryForDetailScreen.swift */; };
+		D40762892A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762542A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift */; };
+		D407628A2A3891E6009BFF1E /* TeamsABShotsReceived.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762552A3891E6009BFF1E /* TeamsABShotsReceived.swift */; };
+		D407628B2A3891E6009BFF1E /* ChangeMatchTeeBoxSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762562A3891E6009BFF1E /* ChangeMatchTeeBoxSheet.swift */; };
+		D407628C2A3891E6009BFF1E /* CompetitorRowItem_GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762572A3891E6009BFF1E /* CompetitorRowItem_GameDetail.swift */; };
+		D407628D2A3891E6009BFF1E /* GameDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762582A3891E6009BFF1E /* GameDetailScreen.swift */; };
+		D407628E2A3891E6009BFF1E /* CourseHandicapCalcScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762592A3891E6009BFF1E /* CourseHandicapCalcScreen.swift */; };
+		D407628F2A3891E6009BFF1E /* TeamCPlayingHandicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407625A2A3891E6009BFF1E /* TeamCPlayingHandicap.swift */; };
+		D40762902A3891E6009BFF1E /* AddGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407625C2A3891E6009BFF1E /* AddGameScreen.swift */; };
+		D40762912A3891E6009BFF1E /* AddGamePlayerRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407625D2A3891E6009BFF1E /* AddGamePlayerRowItem.swift */; };
+		D40762922A3891E6009BFF1E /* GameListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407625F2A3891E6009BFF1E /* GameListScreen.swift */; };
+		D40762932A3891E6009BFF1E /* GameListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762602A3891E6009BFF1E /* GameListRowItem.swift */; };
+		D40762942A3891E6009BFF1E /* CompetitorScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762622A3891E6009BFF1E /* CompetitorScores.swift */; };
+		D40762952A3891E6009BFF1E /* ScorecardScreenStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */; };
+		D40762962A3891E6009BFF1E /* ScoreCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */; };
+		D407629A2A3891F0009BFF1E /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762982A3891F0009BFF1E /* UIColorTransformer.swift */; };
+		D407629B2A3891F0009BFF1E /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762992A3891F0009BFF1E /* UIImageTransformer.swift */; };
+		D40762B82A3891F8009BFF1E /* ScoreEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407629E2A3891F8009BFF1E /* ScoreEntryViewModel.swift */; };
+		D40762B92A3891F8009BFF1E /* EditClubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A02A3891F8009BFF1E /* EditClubViewModel.swift */; };
+		D40762BA2A3891F8009BFF1E /* EditTeeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A12A3891F8009BFF1E /* EditTeeBoxViewModel.swift */; };
+		D40762BB2A3891F8009BFF1E /* AddCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A22A3891F8009BFF1E /* AddCourseViewModel.swift */; };
+		D40762BC2A3891F8009BFF1E /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A32A3891F8009BFF1E /* CourseListViewModel.swift */; };
+		D40762BD2A3891F8009BFF1E /* ClubListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A42A3891F8009BFF1E /* ClubListViewModel.swift */; };
+		D40762BE2A3891F8009BFF1E /* EditCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A52A3891F8009BFF1E /* EditCourseViewModel.swift */; };
+		D40762BF2A3891F8009BFF1E /* AddTeeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A62A3891F8009BFF1E /* AddTeeBoxViewModel.swift */; };
+		D40762C02A3891F8009BFF1E /* AddHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A72A3891F8009BFF1E /* AddHoleViewModel.swift */; };
+		D40762C12A3891F8009BFF1E /* TeeBoxListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A82A3891F8009BFF1E /* TeeBoxListViewModel.swift */; };
+		D40762C22A3891F8009BFF1E /* HoleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762A92A3891F8009BFF1E /* HoleListViewModel.swift */; };
+		D40762C32A3891F8009BFF1E /* AddEditClubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762AA2A3891F8009BFF1E /* AddEditClubViewModel.swift */; };
+		D40762C42A3891F8009BFF1E /* PlayerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762AC2A3891F8009BFF1E /* PlayerListViewModel.swift */; };
+		D40762C52A3891F8009BFF1E /* AddHandicapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762AD2A3891F8009BFF1E /* AddHandicapViewModel.swift */; };
+		D40762C62A3891F8009BFF1E /* AddPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762AE2A3891F8009BFF1E /* AddPlayerViewModel.swift */; };
+		D40762C72A3891F8009BFF1E /* HandicapListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762AF2A3891F8009BFF1E /* HandicapListViewModel.swift */; };
+		D40762C82A3891F8009BFF1E /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B12A3891F8009BFF1E /* StartGameViewModel.swift */; };
+		D40762C92A3891F8009BFF1E /* AddGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B22A3891F8009BFF1E /* AddGameViewModel.swift */; };
+		D40762CA2A3891F8009BFF1E /* TeamShotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B32A3891F8009BFF1E /* TeamShotsViewModel.swift */; };
+		D40762CB2A3891F8009BFF1E /* TeamScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B42A3891F8009BFF1E /* TeamScoreViewModel.swift */; };
+		D40762CC2A3891F8009BFF1E /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B52A3891F8009BFF1E /* GameListViewModel.swift */; };
+		D40762CD2A3891F8009BFF1E /* CompetitorScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B62A3891F8009BFF1E /* CompetitorScoreViewModel.swift */; };
+		D40762CE2A3891F8009BFF1E /* TeamTeeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B72A3891F8009BFF1E /* TeamTeeBoxViewModel.swift */; };
+		D40762D12A38924B009BFF1E /* GolfDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40762CF2A38924B009BFF1E /* GolfDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D40761CA2A3890F4009BFF1E /* GolfProto6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolfProto6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40761CD2A3890F4009BFF1E /* GolfProto6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfProto6App.swift; sourceTree = "<group>"; };
-		D40761CF2A3890F4009BFF1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D40761D12A3890F5009BFF1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D40761D42A3890F5009BFF1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D40761DC2A38916E009BFF1E /* Bespoke colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bespoke colours.swift"; sourceTree = "<group>"; };
+		D40761DF2A38917F009BFF1E /* PreviewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		D40761E12A38917F009BFF1E /* GameFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFormats.swift; sourceTree = "<group>"; };
+		D40761E32A38917F009BFF1E /* Extensions_Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Color.swift; sourceTree = "<group>"; };
+		D40761E42A38917F009BFF1E /* Extensions_TeamScoreArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_TeamScoreArray.swift; sourceTree = "<group>"; };
+		D40761E52A38917F009BFF1E /* Extensions_TeeBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_TeeBox.swift; sourceTree = "<group>"; };
+		D40761E62A38917F009BFF1E /* Extensions_CompetitorScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_CompetitorScore.swift; sourceTree = "<group>"; };
+		D40761E72A38917F009BFF1E /* Extensions_Competitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Competitor.swift; sourceTree = "<group>"; };
+		D40761E82A38917F009BFF1E /* Extensions_TeamScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_TeamScore.swift; sourceTree = "<group>"; };
+		D40761E92A38917F009BFF1E /* Extensions_HandicapArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_HandicapArray.swift; sourceTree = "<group>"; };
+		D40761EA2A38917F009BFF1E /* Extensions_CompetitorScoreArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_CompetitorScoreArray.swift; sourceTree = "<group>"; };
+		D40761EB2A38917F009BFF1E /* Extensions_Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Game.swift; sourceTree = "<group>"; };
+		D40761EC2A38917F009BFF1E /* Extensions_String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_String.swift; sourceTree = "<group>"; };
+		D40761ED2A38917F009BFF1E /* Extensions_HoleArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_HoleArray.swift; sourceTree = "<group>"; };
+		D40761EE2A38917F009BFF1E /* Extensions_Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Player.swift; sourceTree = "<group>"; };
+		D40761EF2A38917F009BFF1E /* Extensions_NSNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_NSNumber.swift; sourceTree = "<group>"; };
+		D40761F02A38917F009BFF1E /* Extensions_Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Club.swift; sourceTree = "<group>"; };
+		D40761F12A38917F009BFF1E /* Extensions_Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_Integer.swift; sourceTree = "<group>"; };
+		D40762042A38918A009BFF1E /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D40762072A3891C9009BFF1E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D407620A2A3891D4009BFF1E /* TeeBox+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeeBox+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D407620B2A3891D4009BFF1E /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D407620C2A3891D4009BFF1E /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D407620D2A3891D4009BFF1E /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D407620E2A3891D4009BFF1E /* TeamTeeBox+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeamTeeBox+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D407620F2A3891D4009BFF1E /* Competitor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Competitor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D40762102A3891D4009BFF1E /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D40762112A3891D4009BFF1E /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D40762122A3891D4009BFF1E /* TeeBox+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeeBox+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D40762132A3891D4009BFF1E /* Competitor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Competitor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D40762142A3891D4009BFF1E /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D40762152A3891D4009BFF1E /* TeamTeeBox+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeamTeeBox+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D40762162A3891D4009BFF1E /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D40762172A3891D4009BFF1E /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D40762272A3891E6009BFF1E /* SettingsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		D40762292A3891E6009BFF1E /* ScoreEntryTeamRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryTeamRow.swift; sourceTree = "<group>"; };
+		D407622A2A3891E6009BFF1E /* CompetitorRowScoreBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitorRowScoreBox.swift; sourceTree = "<group>"; };
+		D407622B2A3891E6009BFF1E /* ScoreEntryCompetitorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryCompetitorRow.swift; sourceTree = "<group>"; };
+		D407622C2A3891E6009BFF1E /* TeamRowScoreBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamRowScoreBox.swift; sourceTree = "<group>"; };
+		D407622D2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryTeamRowButtons.swift; sourceTree = "<group>"; };
+		D407622E2A3891E6009BFF1E /* HoleNavigatorPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleNavigatorPopUp.swift; sourceTree = "<group>"; };
+		D407622F2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchScoreScreen.swift; sourceTree = "<group>"; };
+		D40762302A3891E6009BFF1E /* ScoreEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryScreen.swift; sourceTree = "<group>"; };
+		D40762332A3891E6009BFF1E /* CourseListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListScreen.swift; sourceTree = "<group>"; };
+		D40762342A3891E6009BFF1E /* EditCourseScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseScreen.swift; sourceTree = "<group>"; };
+		D40762352A3891E6009BFF1E /* AddCoursesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCoursesScreen.swift; sourceTree = "<group>"; };
+		D40762362A3891E6009BFF1E /* CourseListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListRowItem.swift; sourceTree = "<group>"; };
+		D40762382A3891E6009BFF1E /* EditTeeBoxScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTeeBoxScreen.swift; sourceTree = "<group>"; };
+		D40762392A3891E6009BFF1E /* TeeBoxListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeeBoxListScreen.swift; sourceTree = "<group>"; };
+		D407623A2A3891E6009BFF1E /* TeeBoxListScreen_1Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeeBoxListScreen_1Course.swift; sourceTree = "<group>"; };
+		D407623B2A3891E6009BFF1E /* TeeBoxListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeeBoxListRowItem.swift; sourceTree = "<group>"; };
+		D407623C2A3891E6009BFF1E /* TeeBoxDistancesSubScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeeBoxDistancesSubScreen.swift; sourceTree = "<group>"; };
+		D407623D2A3891E6009BFF1E /* AddTeeBoxScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeeBoxScreen.swift; sourceTree = "<group>"; };
+		D407623F2A3891E6009BFF1E /* HolesLayout9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolesLayout9.swift; sourceTree = "<group>"; };
+		D40762402A3891E6009BFF1E /* HoleListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleListScreen.swift; sourceTree = "<group>"; };
+		D40762412A3891E6009BFF1E /* HolesLayoutTotals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolesLayoutTotals.swift; sourceTree = "<group>"; };
+		D40762432A3891E6009BFF1E /* ClubListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubListRowItem.swift; sourceTree = "<group>"; };
+		D40762442A3891E6009BFF1E /* EditClubScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClubScreen.swift; sourceTree = "<group>"; };
+		D40762452A3891E6009BFF1E /* ClubListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubListScreen.swift; sourceTree = "<group>"; };
+		D40762462A3891E6009BFF1E /* AddClubScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClubScreen.swift; sourceTree = "<group>"; };
+		D40762482A3891E6009BFF1E /* PlayerListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListScreen.swift; sourceTree = "<group>"; };
+		D40762492A3891E6009BFF1E /* PlayerListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListRowItem.swift; sourceTree = "<group>"; };
+		D407624A2A3891E6009BFF1E /* AddHandicapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHandicapScreen.swift; sourceTree = "<group>"; };
+		D407624B2A3891E6009BFF1E /* AddPlayerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerScreen.swift; sourceTree = "<group>"; };
+		D407624C2A3891E6009BFF1E /* PlayerDetailScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailScreen.swift; sourceTree = "<group>"; };
+		D407624D2A3891E6009BFF1E /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D407624E2A3891E6009BFF1E /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		D40762512A3891E6009BFF1E /* TeamsABPlayingHandicaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsABPlayingHandicaps.swift; sourceTree = "<group>"; };
+		D40762522A3891E6009BFF1E /* TeamsABExtraShots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsABExtraShots.swift; sourceTree = "<group>"; };
+		D40762532A3891E6009BFF1E /* GameSummaryForDetailScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSummaryForDetailScreen.swift; sourceTree = "<group>"; };
+		D40762542A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCompetitorTeeBoxSheet.swift; sourceTree = "<group>"; };
+		D40762552A3891E6009BFF1E /* TeamsABShotsReceived.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsABShotsReceived.swift; sourceTree = "<group>"; };
+		D40762562A3891E6009BFF1E /* ChangeMatchTeeBoxSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeMatchTeeBoxSheet.swift; sourceTree = "<group>"; };
+		D40762572A3891E6009BFF1E /* CompetitorRowItem_GameDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitorRowItem_GameDetail.swift; sourceTree = "<group>"; };
+		D40762582A3891E6009BFF1E /* GameDetailScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailScreen.swift; sourceTree = "<group>"; };
+		D40762592A3891E6009BFF1E /* CourseHandicapCalcScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHandicapCalcScreen.swift; sourceTree = "<group>"; };
+		D407625A2A3891E6009BFF1E /* TeamCPlayingHandicap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCPlayingHandicap.swift; sourceTree = "<group>"; };
+		D407625C2A3891E6009BFF1E /* AddGameScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameScreen.swift; sourceTree = "<group>"; };
+		D407625D2A3891E6009BFF1E /* AddGamePlayerRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGamePlayerRowItem.swift; sourceTree = "<group>"; };
+		D407625F2A3891E6009BFF1E /* GameListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListScreen.swift; sourceTree = "<group>"; };
+		D40762602A3891E6009BFF1E /* GameListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListRowItem.swift; sourceTree = "<group>"; };
+		D40762622A3891E6009BFF1E /* CompetitorScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitorScores.swift; sourceTree = "<group>"; };
+		D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorecardScreenStroke.swift; sourceTree = "<group>"; };
+		D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardScreen.swift; sourceTree = "<group>"; };
+		D40762982A3891F0009BFF1E /* UIColorTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
+		D40762992A3891F0009BFF1E /* UIImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		D407629E2A3891F8009BFF1E /* ScoreEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryViewModel.swift; sourceTree = "<group>"; };
+		D40762A02A3891F8009BFF1E /* EditClubViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditClubViewModel.swift; sourceTree = "<group>"; };
+		D40762A12A3891F8009BFF1E /* EditTeeBoxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTeeBoxViewModel.swift; sourceTree = "<group>"; };
+		D40762A22A3891F8009BFF1E /* AddCourseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseViewModel.swift; sourceTree = "<group>"; };
+		D40762A32A3891F8009BFF1E /* CourseListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
+		D40762A42A3891F8009BFF1E /* ClubListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubListViewModel.swift; sourceTree = "<group>"; };
+		D40762A52A3891F8009BFF1E /* EditCourseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseViewModel.swift; sourceTree = "<group>"; };
+		D40762A62A3891F8009BFF1E /* AddTeeBoxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeeBoxViewModel.swift; sourceTree = "<group>"; };
+		D40762A72A3891F8009BFF1E /* AddHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleViewModel.swift; sourceTree = "<group>"; };
+		D40762A82A3891F8009BFF1E /* TeeBoxListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeeBoxListViewModel.swift; sourceTree = "<group>"; };
+		D40762A92A3891F8009BFF1E /* HoleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleListViewModel.swift; sourceTree = "<group>"; };
+		D40762AA2A3891F8009BFF1E /* AddEditClubViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditClubViewModel.swift; sourceTree = "<group>"; };
+		D40762AC2A3891F8009BFF1E /* PlayerListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewModel.swift; sourceTree = "<group>"; };
+		D40762AD2A3891F8009BFF1E /* AddHandicapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHandicapViewModel.swift; sourceTree = "<group>"; };
+		D40762AE2A3891F8009BFF1E /* AddPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerViewModel.swift; sourceTree = "<group>"; };
+		D40762AF2A3891F8009BFF1E /* HandicapListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandicapListViewModel.swift; sourceTree = "<group>"; };
+		D40762B12A3891F8009BFF1E /* StartGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
+		D40762B22A3891F8009BFF1E /* AddGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewModel.swift; sourceTree = "<group>"; };
+		D40762B32A3891F8009BFF1E /* TeamShotsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamShotsViewModel.swift; sourceTree = "<group>"; };
+		D40762B42A3891F8009BFF1E /* TeamScoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScoreViewModel.swift; sourceTree = "<group>"; };
+		D40762B52A3891F8009BFF1E /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		D40762B62A3891F8009BFF1E /* CompetitorScoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitorScoreViewModel.swift; sourceTree = "<group>"; };
+		D40762B72A3891F8009BFF1E /* TeamTeeBoxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTeeBoxViewModel.swift; sourceTree = "<group>"; };
+		D40762D02A38924B009BFF1E /* GolfDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GolfDataModel.xcdatamodel; sourceTree = "<group>"; };
+		D40762D22A38941B009BFF1E /* GolfProto6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GolfProto6.entitlements; sourceTree = "<group>"; };
+		D40762D32A389447009BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +271,21 @@
 		D40761CC2A3890F4009BFF1E /* GolfProto6 */ = {
 			isa = PBXGroup;
 			children = (
+				D40762D32A389447009BFF1E /* Info.plist */,
+				D40762D22A38941B009BFF1E /* GolfProto6.entitlements */,
+				D40762CF2A38924B009BFF1E /* GolfDataModel.xcdatamodeld */,
 				D40761CD2A3890F4009BFF1E /* GolfProto6App.swift */,
-				D40761CF2A3890F4009BFF1E /* ContentView.swift */,
 				D40761D12A3890F5009BFF1E /* Assets.xcassets */,
+				D40761E22A38917F009BFF1E /* Extensions */,
+				D40761DE2A38917F009BFF1E /* Extensions for previews */,
+				D40762092A3891D4009BFF1E /* Models */,
+				D40762062A3891C9009BFF1E /* Managers */,
+				D40762032A38918A009BFF1E /* Image Picker */,
+				D40761E02A38917F009BFF1E /* Game formats */,
+				D40761DB2A38916E009BFF1E /* Colours */,
+				D40762262A3891E6009BFF1E /* Screens */,
+				D407629C2A3891F8009BFF1E /* View models */,
+				D40762972A3891F0009BFF1E /* Transformers */,
 				D40761D32A3890F5009BFF1E /* Preview Content */,
 			);
 			path = GolfProto6;
@@ -65,6 +297,313 @@
 				D40761D42A3890F5009BFF1E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D40761DB2A38916E009BFF1E /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				D40761DC2A38916E009BFF1E /* Bespoke colours.swift */,
+			);
+			path = Colours;
+			sourceTree = "<group>";
+		};
+		D40761DE2A38917F009BFF1E /* Extensions for previews */ = {
+			isa = PBXGroup;
+			children = (
+				D40761DF2A38917F009BFF1E /* PreviewProvider.swift */,
+			);
+			path = "Extensions for previews";
+			sourceTree = "<group>";
+		};
+		D40761E02A38917F009BFF1E /* Game formats */ = {
+			isa = PBXGroup;
+			children = (
+				D40761E12A38917F009BFF1E /* GameFormats.swift */,
+			);
+			path = "Game formats";
+			sourceTree = "<group>";
+		};
+		D40761E22A38917F009BFF1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D40761E32A38917F009BFF1E /* Extensions_Color.swift */,
+				D40761E42A38917F009BFF1E /* Extensions_TeamScoreArray.swift */,
+				D40761E52A38917F009BFF1E /* Extensions_TeeBox.swift */,
+				D40761E62A38917F009BFF1E /* Extensions_CompetitorScore.swift */,
+				D40761E72A38917F009BFF1E /* Extensions_Competitor.swift */,
+				D40761E82A38917F009BFF1E /* Extensions_TeamScore.swift */,
+				D40761E92A38917F009BFF1E /* Extensions_HandicapArray.swift */,
+				D40761EA2A38917F009BFF1E /* Extensions_CompetitorScoreArray.swift */,
+				D40761EB2A38917F009BFF1E /* Extensions_Game.swift */,
+				D40761EC2A38917F009BFF1E /* Extensions_String.swift */,
+				D40761ED2A38917F009BFF1E /* Extensions_HoleArray.swift */,
+				D40761EE2A38917F009BFF1E /* Extensions_Player.swift */,
+				D40761EF2A38917F009BFF1E /* Extensions_NSNumber.swift */,
+				D40761F02A38917F009BFF1E /* Extensions_Club.swift */,
+				D40761F12A38917F009BFF1E /* Extensions_Integer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D40762032A38918A009BFF1E /* Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				D40762042A38918A009BFF1E /* ImagePicker.swift */,
+			);
+			path = "Image Picker";
+			sourceTree = "<group>";
+		};
+		D40762062A3891C9009BFF1E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D40762072A3891C9009BFF1E /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D40762092A3891D4009BFF1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D407620A2A3891D4009BFF1E /* TeeBox+CoreDataProperties.swift */,
+				D407620B2A3891D4009BFF1E /* Player+CoreDataClass.swift */,
+				D407620C2A3891D4009BFF1E /* Game+CoreDataClass.swift */,
+				D407620D2A3891D4009BFF1E /* Club+CoreDataClass.swift */,
+				D407620E2A3891D4009BFF1E /* TeamTeeBox+CoreDataProperties.swift */,
+				D407620F2A3891D4009BFF1E /* Competitor+CoreDataProperties.swift */,
+				D40762102A3891D4009BFF1E /* Course+CoreDataClass.swift */,
+				D40762112A3891D4009BFF1E /* Player+CoreDataProperties.swift */,
+				D40762122A3891D4009BFF1E /* TeeBox+CoreDataClass.swift */,
+				D40762132A3891D4009BFF1E /* Competitor+CoreDataClass.swift */,
+				D40762142A3891D4009BFF1E /* Course+CoreDataProperties.swift */,
+				D40762152A3891D4009BFF1E /* TeamTeeBox+CoreDataClass.swift */,
+				D40762162A3891D4009BFF1E /* Game+CoreDataProperties.swift */,
+				D40762172A3891D4009BFF1E /* Club+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D40762262A3891E6009BFF1E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D40762272A3891E6009BFF1E /* SettingsScreen.swift */,
+				D40762282A3891E6009BFF1E /* Score entry */,
+				D40762312A3891E6009BFF1E /* Clubs */,
+				D40762472A3891E6009BFF1E /* Players */,
+				D407624D2A3891E6009BFF1E /* HomeView.swift */,
+				D407624E2A3891E6009BFF1E /* MainScreen.swift */,
+				D407624F2A3891E6009BFF1E /* Games */,
+				D40762612A3891E6009BFF1E /* Scorecard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D40762282A3891E6009BFF1E /* Score entry */ = {
+			isa = PBXGroup;
+			children = (
+				D40762292A3891E6009BFF1E /* ScoreEntryTeamRow.swift */,
+				D407622A2A3891E6009BFF1E /* CompetitorRowScoreBox.swift */,
+				D407622B2A3891E6009BFF1E /* ScoreEntryCompetitorRow.swift */,
+				D407622C2A3891E6009BFF1E /* TeamRowScoreBox.swift */,
+				D407622D2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift */,
+				D407622E2A3891E6009BFF1E /* HoleNavigatorPopUp.swift */,
+				D407622F2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift */,
+				D40762302A3891E6009BFF1E /* ScoreEntryScreen.swift */,
+			);
+			path = "Score entry";
+			sourceTree = "<group>";
+		};
+		D40762312A3891E6009BFF1E /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				D40762322A3891E6009BFF1E /* Course List Screen */,
+				D40762372A3891E6009BFF1E /* TeeBoxListScreen */,
+				D407623E2A3891E6009BFF1E /* HoleList Screen */,
+				D40762422A3891E6009BFF1E /* Club List Screen */,
+			);
+			path = Clubs;
+			sourceTree = "<group>";
+		};
+		D40762322A3891E6009BFF1E /* Course List Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D40762332A3891E6009BFF1E /* CourseListScreen.swift */,
+				D40762342A3891E6009BFF1E /* EditCourseScreen.swift */,
+				D40762352A3891E6009BFF1E /* AddCoursesScreen.swift */,
+				D40762362A3891E6009BFF1E /* CourseListRowItem.swift */,
+			);
+			path = "Course List Screen";
+			sourceTree = "<group>";
+		};
+		D40762372A3891E6009BFF1E /* TeeBoxListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D40762382A3891E6009BFF1E /* EditTeeBoxScreen.swift */,
+				D40762392A3891E6009BFF1E /* TeeBoxListScreen.swift */,
+				D407623A2A3891E6009BFF1E /* TeeBoxListScreen_1Course.swift */,
+				D407623B2A3891E6009BFF1E /* TeeBoxListRowItem.swift */,
+				D407623C2A3891E6009BFF1E /* TeeBoxDistancesSubScreen.swift */,
+				D407623D2A3891E6009BFF1E /* AddTeeBoxScreen.swift */,
+			);
+			path = TeeBoxListScreen;
+			sourceTree = "<group>";
+		};
+		D407623E2A3891E6009BFF1E /* HoleList Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D407623F2A3891E6009BFF1E /* HolesLayout9.swift */,
+				D40762402A3891E6009BFF1E /* HoleListScreen.swift */,
+				D40762412A3891E6009BFF1E /* HolesLayoutTotals.swift */,
+			);
+			path = "HoleList Screen";
+			sourceTree = "<group>";
+		};
+		D40762422A3891E6009BFF1E /* Club List Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D40762432A3891E6009BFF1E /* ClubListRowItem.swift */,
+				D40762442A3891E6009BFF1E /* EditClubScreen.swift */,
+				D40762452A3891E6009BFF1E /* ClubListScreen.swift */,
+				D40762462A3891E6009BFF1E /* AddClubScreen.swift */,
+			);
+			path = "Club List Screen";
+			sourceTree = "<group>";
+		};
+		D40762472A3891E6009BFF1E /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				D40762482A3891E6009BFF1E /* PlayerListScreen.swift */,
+				D40762492A3891E6009BFF1E /* PlayerListRowItem.swift */,
+				D407624A2A3891E6009BFF1E /* AddHandicapScreen.swift */,
+				D407624B2A3891E6009BFF1E /* AddPlayerScreen.swift */,
+				D407624C2A3891E6009BFF1E /* PlayerDetailScreen.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		D407624F2A3891E6009BFF1E /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				D40762502A3891E6009BFF1E /* Game detail */,
+				D407625B2A3891E6009BFF1E /* Add game */,
+				D407625E2A3891E6009BFF1E /* Games list */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		D40762502A3891E6009BFF1E /* Game detail */ = {
+			isa = PBXGroup;
+			children = (
+				D40762512A3891E6009BFF1E /* TeamsABPlayingHandicaps.swift */,
+				D40762522A3891E6009BFF1E /* TeamsABExtraShots.swift */,
+				D40762532A3891E6009BFF1E /* GameSummaryForDetailScreen.swift */,
+				D40762542A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift */,
+				D40762552A3891E6009BFF1E /* TeamsABShotsReceived.swift */,
+				D40762562A3891E6009BFF1E /* ChangeMatchTeeBoxSheet.swift */,
+				D40762572A3891E6009BFF1E /* CompetitorRowItem_GameDetail.swift */,
+				D40762582A3891E6009BFF1E /* GameDetailScreen.swift */,
+				D40762592A3891E6009BFF1E /* CourseHandicapCalcScreen.swift */,
+				D407625A2A3891E6009BFF1E /* TeamCPlayingHandicap.swift */,
+			);
+			path = "Game detail";
+			sourceTree = "<group>";
+		};
+		D407625B2A3891E6009BFF1E /* Add game */ = {
+			isa = PBXGroup;
+			children = (
+				D407625C2A3891E6009BFF1E /* AddGameScreen.swift */,
+				D407625D2A3891E6009BFF1E /* AddGamePlayerRowItem.swift */,
+			);
+			path = "Add game";
+			sourceTree = "<group>";
+		};
+		D407625E2A3891E6009BFF1E /* Games list */ = {
+			isa = PBXGroup;
+			children = (
+				D407625F2A3891E6009BFF1E /* GameListScreen.swift */,
+				D40762602A3891E6009BFF1E /* GameListRowItem.swift */,
+			);
+			path = "Games list";
+			sourceTree = "<group>";
+		};
+		D40762612A3891E6009BFF1E /* Scorecard */ = {
+			isa = PBXGroup;
+			children = (
+				D40762622A3891E6009BFF1E /* CompetitorScores.swift */,
+				D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */,
+				D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */,
+			);
+			path = Scorecard;
+			sourceTree = "<group>";
+		};
+		D40762972A3891F0009BFF1E /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				D40762982A3891F0009BFF1E /* UIColorTransformer.swift */,
+				D40762992A3891F0009BFF1E /* UIImageTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		D407629C2A3891F8009BFF1E /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				D407629D2A3891F8009BFF1E /* Score entry */,
+				D407629F2A3891F8009BFF1E /* Clubs */,
+				D40762AB2A3891F8009BFF1E /* Players */,
+				D40762B02A3891F8009BFF1E /* Games */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		D407629D2A3891F8009BFF1E /* Score entry */ = {
+			isa = PBXGroup;
+			children = (
+				D407629E2A3891F8009BFF1E /* ScoreEntryViewModel.swift */,
+			);
+			path = "Score entry";
+			sourceTree = "<group>";
+		};
+		D407629F2A3891F8009BFF1E /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				D40762A02A3891F8009BFF1E /* EditClubViewModel.swift */,
+				D40762A12A3891F8009BFF1E /* EditTeeBoxViewModel.swift */,
+				D40762A22A3891F8009BFF1E /* AddCourseViewModel.swift */,
+				D40762A32A3891F8009BFF1E /* CourseListViewModel.swift */,
+				D40762A42A3891F8009BFF1E /* ClubListViewModel.swift */,
+				D40762A52A3891F8009BFF1E /* EditCourseViewModel.swift */,
+				D40762A62A3891F8009BFF1E /* AddTeeBoxViewModel.swift */,
+				D40762A72A3891F8009BFF1E /* AddHoleViewModel.swift */,
+				D40762A82A3891F8009BFF1E /* TeeBoxListViewModel.swift */,
+				D40762A92A3891F8009BFF1E /* HoleListViewModel.swift */,
+				D40762AA2A3891F8009BFF1E /* AddEditClubViewModel.swift */,
+			);
+			path = Clubs;
+			sourceTree = "<group>";
+		};
+		D40762AB2A3891F8009BFF1E /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				D40762AC2A3891F8009BFF1E /* PlayerListViewModel.swift */,
+				D40762AD2A3891F8009BFF1E /* AddHandicapViewModel.swift */,
+				D40762AE2A3891F8009BFF1E /* AddPlayerViewModel.swift */,
+				D40762AF2A3891F8009BFF1E /* HandicapListViewModel.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		D40762B02A3891F8009BFF1E /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				D40762B12A3891F8009BFF1E /* StartGameViewModel.swift */,
+				D40762B22A3891F8009BFF1E /* AddGameViewModel.swift */,
+				D40762B32A3891F8009BFF1E /* TeamShotsViewModel.swift */,
+				D40762B42A3891F8009BFF1E /* TeamScoreViewModel.swift */,
+				D40762B52A3891F8009BFF1E /* GameListViewModel.swift */,
+				D40762B62A3891F8009BFF1E /* CompetitorScoreViewModel.swift */,
+				D40762B72A3891F8009BFF1E /* TeamTeeBoxViewModel.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +676,117 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40761D02A3890F4009BFF1E /* ContentView.swift in Sources */,
+				D40761F92A38917F009BFF1E /* Extensions_TeamScore.swift in Sources */,
+				D40762C02A3891F8009BFF1E /* AddHoleViewModel.swift in Sources */,
+				D40762BB2A3891F8009BFF1E /* AddCourseViewModel.swift in Sources */,
+				D40762902A3891E6009BFF1E /* AddGameScreen.swift in Sources */,
+				D40762732A3891E6009BFF1E /* TeeBoxListScreen.swift in Sources */,
+				D40762802A3891E6009BFF1E /* PlayerListRowItem.swift in Sources */,
+				D40762762A3891E6009BFF1E /* TeeBoxDistancesSubScreen.swift in Sources */,
+				D407627F2A3891E6009BFF1E /* PlayerListScreen.swift in Sources */,
+				D40762842A3891E6009BFF1E /* HomeView.swift in Sources */,
+				D40761F62A38917F009BFF1E /* Extensions_TeeBox.swift in Sources */,
+				D407628E2A3891E6009BFF1E /* CourseHandicapCalcScreen.swift in Sources */,
+				D40761F82A38917F009BFF1E /* Extensions_Competitor.swift in Sources */,
+				D40762212A3891D4009BFF1E /* Competitor+CoreDataClass.swift in Sources */,
+				D40762722A3891E6009BFF1E /* EditTeeBoxScreen.swift in Sources */,
+				D40762C32A3891F8009BFF1E /* AddEditClubViewModel.swift in Sources */,
+				D40762792A3891E6009BFF1E /* HoleListScreen.swift in Sources */,
+				D40762922A3891E6009BFF1E /* GameListScreen.swift in Sources */,
+				D40762BF2A3891F8009BFF1E /* AddTeeBoxViewModel.swift in Sources */,
+				D40762692A3891E6009BFF1E /* TeamRowScoreBox.swift in Sources */,
+				D407621A2A3891D4009BFF1E /* Game+CoreDataClass.swift in Sources */,
+				D40762C92A3891F8009BFF1E /* AddGameViewModel.swift in Sources */,
+				D40762052A38918A009BFF1E /* ImagePicker.swift in Sources */,
+				D407628F2A3891E6009BFF1E /* TeamCPlayingHandicap.swift in Sources */,
+				D40762742A3891E6009BFF1E /* TeeBoxListScreen_1Course.swift in Sources */,
+				D40762672A3891E6009BFF1E /* CompetitorRowScoreBox.swift in Sources */,
+				D40761F52A38917F009BFF1E /* Extensions_TeamScoreArray.swift in Sources */,
+				D40762022A38917F009BFF1E /* Extensions_Integer.swift in Sources */,
+				D40762882A3891E6009BFF1E /* GameSummaryForDetailScreen.swift in Sources */,
+				D40762872A3891E6009BFF1E /* TeamsABExtraShots.swift in Sources */,
+				D407629A2A3891F0009BFF1E /* UIColorTransformer.swift in Sources */,
+				D407621E2A3891D4009BFF1E /* Course+CoreDataClass.swift in Sources */,
+				D40762C72A3891F8009BFF1E /* HandicapListViewModel.swift in Sources */,
+				D40762712A3891E6009BFF1E /* CourseListRowItem.swift in Sources */,
+				D40762652A3891E6009BFF1E /* SettingsScreen.swift in Sources */,
+				D40762232A3891D4009BFF1E /* TeamTeeBox+CoreDataClass.swift in Sources */,
+				D40762682A3891E6009BFF1E /* ScoreEntryCompetitorRow.swift in Sources */,
+				D40762192A3891D4009BFF1E /* Player+CoreDataClass.swift in Sources */,
+				D40762D12A38924B009BFF1E /* GolfDataModel.xcdatamodeld in Sources */,
+				D40761FD2A38917F009BFF1E /* Extensions_String.swift in Sources */,
+				D40762C42A3891F8009BFF1E /* PlayerListViewModel.swift in Sources */,
+				D40761FB2A38917F009BFF1E /* Extensions_CompetitorScoreArray.swift in Sources */,
+				D40761DD2A38916E009BFF1E /* Bespoke colours.swift in Sources */,
+				D40762CA2A3891F8009BFF1E /* TeamShotsViewModel.swift in Sources */,
+				D40762242A3891D4009BFF1E /* Game+CoreDataProperties.swift in Sources */,
+				D40762BD2A3891F8009BFF1E /* ClubListViewModel.swift in Sources */,
+				D40762962A3891E6009BFF1E /* ScoreCardScreen.swift in Sources */,
+				D40762CE2A3891F8009BFF1E /* TeamTeeBoxViewModel.swift in Sources */,
+				D40761F72A38917F009BFF1E /* Extensions_CompetitorScore.swift in Sources */,
+				D40762752A3891E6009BFF1E /* TeeBoxListRowItem.swift in Sources */,
+				D40762862A3891E6009BFF1E /* TeamsABPlayingHandicaps.swift in Sources */,
+				D407627C2A3891E6009BFF1E /* EditClubScreen.swift in Sources */,
+				D40762082A3891C9009BFF1E /* CoreDataManager.swift in Sources */,
+				D40762B82A3891F8009BFF1E /* ScoreEntryViewModel.swift in Sources */,
+				D40761F22A38917F009BFF1E /* PreviewProvider.swift in Sources */,
+				D40761FF2A38917F009BFF1E /* Extensions_Player.swift in Sources */,
+				D40762C52A3891F8009BFF1E /* AddHandicapViewModel.swift in Sources */,
+				D40761FA2A38917F009BFF1E /* Extensions_HandicapArray.swift in Sources */,
+				D407628D2A3891E6009BFF1E /* GameDetailScreen.swift in Sources */,
+				D40762BA2A3891F8009BFF1E /* EditTeeBoxViewModel.swift in Sources */,
+				D407628A2A3891E6009BFF1E /* TeamsABShotsReceived.swift in Sources */,
+				D40762662A3891E6009BFF1E /* ScoreEntryTeamRow.swift in Sources */,
+				D407629B2A3891F0009BFF1E /* UIImageTransformer.swift in Sources */,
+				D40762782A3891E6009BFF1E /* HolesLayout9.swift in Sources */,
+				D40761FC2A38917F009BFF1E /* Extensions_Game.swift in Sources */,
+				D40762252A3891D4009BFF1E /* Club+CoreDataProperties.swift in Sources */,
+				D407626A2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift in Sources */,
+				D40762C22A3891F8009BFF1E /* HoleListViewModel.swift in Sources */,
+				D407626C2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift in Sources */,
+				D407627D2A3891E6009BFF1E /* ClubListScreen.swift in Sources */,
+				D40761FE2A38917F009BFF1E /* Extensions_HoleArray.swift in Sources */,
+				D40762702A3891E6009BFF1E /* AddCoursesScreen.swift in Sources */,
+				D40762C82A3891F8009BFF1E /* StartGameViewModel.swift in Sources */,
+				D40762942A3891E6009BFF1E /* CompetitorScores.swift in Sources */,
+				D40762BE2A3891F8009BFF1E /* EditCourseViewModel.swift in Sources */,
+				D40762812A3891E6009BFF1E /* AddHandicapScreen.swift in Sources */,
+				D40761F42A38917F009BFF1E /* Extensions_Color.swift in Sources */,
+				D407626F2A3891E6009BFF1E /* EditCourseScreen.swift in Sources */,
+				D407627A2A3891E6009BFF1E /* HolesLayoutTotals.swift in Sources */,
+				D40762C62A3891F8009BFF1E /* AddPlayerViewModel.swift in Sources */,
 				D40761CE2A3890F4009BFF1E /* GolfProto6App.swift in Sources */,
+				D407621B2A3891D4009BFF1E /* Club+CoreDataClass.swift in Sources */,
+				D40762BC2A3891F8009BFF1E /* CourseListViewModel.swift in Sources */,
+				D407626B2A3891E6009BFF1E /* HoleNavigatorPopUp.swift in Sources */,
+				D40761F32A38917F009BFF1E /* GameFormats.swift in Sources */,
+				D407626E2A3891E6009BFF1E /* CourseListScreen.swift in Sources */,
+				D40762912A3891E6009BFF1E /* AddGamePlayerRowItem.swift in Sources */,
+				D407628C2A3891E6009BFF1E /* CompetitorRowItem_GameDetail.swift in Sources */,
+				D40762B92A3891F8009BFF1E /* EditClubViewModel.swift in Sources */,
+				D40762852A3891E6009BFF1E /* MainScreen.swift in Sources */,
+				D40762832A3891E6009BFF1E /* PlayerDetailScreen.swift in Sources */,
+				D40762772A3891E6009BFF1E /* AddTeeBoxScreen.swift in Sources */,
+				D407621D2A3891D4009BFF1E /* Competitor+CoreDataProperties.swift in Sources */,
+				D40762182A3891D4009BFF1E /* TeeBox+CoreDataProperties.swift in Sources */,
+				D40762CC2A3891F8009BFF1E /* GameListViewModel.swift in Sources */,
+				D407621F2A3891D4009BFF1E /* Player+CoreDataProperties.swift in Sources */,
+				D40762222A3891D4009BFF1E /* Course+CoreDataProperties.swift in Sources */,
+				D40762C12A3891F8009BFF1E /* TeeBoxListViewModel.swift in Sources */,
+				D407628B2A3891E6009BFF1E /* ChangeMatchTeeBoxSheet.swift in Sources */,
+				D40762822A3891E6009BFF1E /* AddPlayerScreen.swift in Sources */,
+				D40762012A38917F009BFF1E /* Extensions_Club.swift in Sources */,
+				D40762CB2A3891F8009BFF1E /* TeamScoreViewModel.swift in Sources */,
+				D407627B2A3891E6009BFF1E /* ClubListRowItem.swift in Sources */,
+				D407627E2A3891E6009BFF1E /* AddClubScreen.swift in Sources */,
+				D40762952A3891E6009BFF1E /* ScorecardScreenStroke.swift in Sources */,
+				D40762202A3891D4009BFF1E /* TeeBox+CoreDataClass.swift in Sources */,
+				D40762892A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift in Sources */,
+				D40762932A3891E6009BFF1E /* GameListRowItem.swift in Sources */,
+				D407626D2A3891E6009BFF1E /* ScoreEntryScreen.swift in Sources */,
+				D40762CD2A3891F8009BFF1E /* CompetitorScoreViewModel.swift in Sources */,
+				D40762002A38917F009BFF1E /* Extensions_NSNumber.swift in Sources */,
+				D407621C2A3891D4009BFF1E /* TeamTeeBox+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +912,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GolfProto6/GolfProto6.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GolfProto6/Preview Content\"";
 				DEVELOPMENT_TEAM = X763376P7X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolfProto6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +943,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GolfProto6/GolfProto6.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GolfProto6/Preview Content\"";
 				DEVELOPMENT_TEAM = X763376P7X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolfProto6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +991,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D40762CF2A38924B009BFF1E /* GolfDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D40762D02A38924B009BFF1E /* GolfDataModel.xcdatamodel */,
+			);
+			currentVersion = D40762D02A38924B009BFF1E /* GolfDataModel.xcdatamodel */;
+			path = GolfDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D40761C22A3890F4009BFF1E /* Project object */;
 }
