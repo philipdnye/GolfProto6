@@ -84,3 +84,25 @@ extension [CompetitorScore]{
         return total
     }
 }
+
+
+extension [CompetitorScore] {
+    func TotalStablefordPointsToPar () -> String {
+        var parPointsForHolesPlayed: Int16 = 0
+        var stablefordPointsToPar: Int = 0
+        var stablefordPointsToParString: String = "E"
+        for hole in self {
+            if (hole as AnyObject).scoreCommitted {
+                parPointsForHolesPlayed += 2
+            }
+        }
+        stablefordPointsToPar = Int(parPointsForHolesPlayed - self.TotalStablefordPoints())
+        stablefordPointsToParString = stablefordPointsToPar.ScoreToStablefordParString()
+        
+        
+        
+        
+        
+        return stablefordPointsToParString
+    }
+}

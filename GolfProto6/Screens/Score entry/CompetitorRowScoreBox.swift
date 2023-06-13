@@ -31,7 +31,8 @@ struct CompetitorRowScoreBox: View {
                     .offset(x: -30, y: -30)
                     .zIndex(1)
             } else {
-                Text("+/-")
+                Text(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF)[competitorIndex].competitorScoresArray.TotalStablefordPointsToPar())
+                //Text("+/-")// need to change this value for the +/- against 2's
                     .frame(width:35, height:35)
                 
                     .padding(1)

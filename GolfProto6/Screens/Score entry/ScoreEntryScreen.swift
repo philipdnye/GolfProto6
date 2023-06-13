@@ -30,7 +30,8 @@ struct ScoreEntryScreen: View {
                     
                     .foregroundColor(darkTeal)
                     .opacity(0.50)
-                    Text("36")
+                Text(String((scoreEntryVM.currentGame.game.defaultTeeBox?.TotalPar())!))
+//                Text("36")
                                     .font(.callout)
                                     
                                     .foregroundColor(.white)
@@ -59,7 +60,7 @@ struct ScoreEntryScreen: View {
                                     
                                     .foregroundColor(.white)
                 
-                Text("To Par")
+                Text("Par")
                     .font(.caption2)
                     .offset(x:-1, y:17)
                     .foregroundColor(darkTeal)
