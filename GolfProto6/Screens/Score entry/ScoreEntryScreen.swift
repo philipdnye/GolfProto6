@@ -19,6 +19,60 @@ struct ScoreEntryScreen: View {
     
     var game: GameViewModel
     
+    
+    
+    
+    private var showTotalsButton: some View {
+        AnyView(Button(action: setToPar){
+            ZStack{
+                Image(systemName: "circle.fill")
+                    
+                    
+                    .foregroundColor(darkTeal)
+                    .opacity(0.50)
+                    Text("36")
+                                    .font(.callout)
+                                    
+                                    .foregroundColor(.white)
+                
+                Text("Totals")
+                    .font(.caption2)
+                    .offset(x:-1, y:17)
+                    .foregroundColor(darkTeal)
+                
+                
+            }
+        }
+        )
+    }
+    
+    private var showToParButton: some View {
+        AnyView(Button(action: setToPar){
+            ZStack{
+                Image(systemName: "circle.fill")
+                    
+                    
+                    .foregroundColor(darkTeal)
+                    .opacity(0.50)
+                    Text("+/-")
+                                    .font(.callout)
+                                    
+                                    .foregroundColor(.white)
+                
+                Text("To Par")
+                    .font(.caption2)
+                    .offset(x:-1, y:17)
+                    .foregroundColor(darkTeal)
+                
+                
+            }
+        }
+        )
+    }
+    
+    
+    
+    
     private var scoreCardButton: some View {
         AnyView(Button(action: showScorecard){
             ZStack {
@@ -30,6 +84,8 @@ struct ScoreEntryScreen: View {
             }
         })
     }
+    
+    
     
     private var scoreCardButtonStroke: some View {
         AnyView(Button(action: showScorecardStroke){
@@ -64,6 +120,9 @@ struct ScoreEntryScreen: View {
     }
     private func showScorecardStroke () {
         isPresentedSheetScoreCardStroke.toggle()
+    }
+    private func setToPar () {
+        scoreEntryVM.scoreButton.toggle()
     }
     var body: some View {
         ZStack{
@@ -456,7 +515,21 @@ struct ScoreEntryScreen: View {
                     }
                 }
             }
+            if scoreEntryVM.scoreButton == false {
+                ToolbarItem(placement: .navigationBarLeading){
+                    showTotalsButton
+                }
             }
+            
+            if scoreEntryVM.scoreButton {
+                ToolbarItem(placement: .navigationBarLeading){
+                    showToParButton
+                }
+            }
+            }
+        
+        
+        
         
         
         .sheet(isPresented: $isPresentedSheetScoreCard, onDismiss: {

@@ -24,3 +24,21 @@ extension Int {
         return scoreToParString
     }
 }
+
+
+extension Int {
+    func ScoreToStablefordParString() -> String {
+        var scoreToParString: String = ""
+        switch self {
+        case _ where self > 0:
+            scoreToParString = "+\(self)"
+        case _ where self < 0:
+            scoreToParString = "\(self)"
+        case _ where self == 0:
+            scoreToParString = "E"
+        default:
+            scoreToParString = ""
+        }
+        return scoreToParString
+    }
+}

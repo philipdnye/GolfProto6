@@ -20,7 +20,7 @@ class ScoreEntryViewModel: ObservableObject {
     @Published var teamsScores: [[Int]] = Array(repeating: [0,0], count: 18) //WHEN TEAMS A&B USE 0,1 AND WHEN TEAM C USE 0
     @Published var scoresCommitted: [[Bool]] = Array(repeating: [false,false,false,false], count: 18)
     @Published var currentGame: GameViewModel = GameViewModel(game: Game(context: CoreDataManager.shared.viewContext))
-   
+    @Published var scoreButton: Bool = false
     
     @Published var currentMatchScore: Int = 0
     @Published var holesCommitted: Int = 0

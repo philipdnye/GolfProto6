@@ -16,19 +16,35 @@ struct CompetitorRowScoreBox: View {
     var body: some View {
         
         ZStack{
-            Text(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF)[competitorIndex].competitorScoresArray.TotalStablefordPoints().formatted())
-           // Text("32")
-                .frame(width:35, height:35)
+            if scoreEntryVM.scoreButton {
+                Text(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF)[competitorIndex].competitorScoresArray.TotalStablefordPoints().formatted())
+                // Text("32")
+                    .frame(width:35, height:35)
                 
-                .padding(1)
-                .background(lightTeal)
+                    .padding(1)
+                    .background(lightTeal)
                 
-                .clipShape(Circle())
-                .foregroundColor(.white)
-                .font(.headline)
-                .foregroundColor(darkTeal)
-                .offset(x: -30, y: -30)
-                .zIndex(1)
+                    .clipShape(Circle())
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .foregroundColor(darkTeal)
+                    .offset(x: -30, y: -30)
+                    .zIndex(1)
+            } else {
+                Text("+/-")
+                    .frame(width:35, height:35)
+                
+                    .padding(1)
+                    .background(lightTeal)
+                
+                    .clipShape(Circle())
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .foregroundColor(darkTeal)
+                    .offset(x: -30, y: -30)
+                    .zIndex(1)
+                
+            }
             Text(scoreEntryVM.competitorsScores[scoreEntryVM.holeIndex][competitorIndex].formatted())
             
                 .frame(width: 32, height: 32)
