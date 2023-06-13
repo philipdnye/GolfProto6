@@ -46,6 +46,28 @@ struct CompetitorRowScoreBox: View {
                     .zIndex(1)
                 
             }
+           //*****************
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            //*****************
+            
             Text(scoreEntryVM.competitorsScores[scoreEntryVM.holeIndex][competitorIndex].formatted())
             
                 .frame(width: 32, height: 32)

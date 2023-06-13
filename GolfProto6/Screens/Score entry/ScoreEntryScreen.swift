@@ -20,6 +20,41 @@ struct ScoreEntryScreen: View {
     var game: GameViewModel
     
     
+    private var showZipPointsButton: some View {
+        AnyView(Button(action: setToZip){
+            ZStack{
+                Image(systemName: "circle.fill")
+                    .foregroundColor(.blue)
+                    .opacity(0.75)
+                Text("Z")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                Text("ZIP")
+                    .font(.caption2)
+                    .offset(x:-1, y:17)
+                    .foregroundColor(.blue)
+            }
+        })
+    }
+    private var showTotalPointsButton: some View {
+        AnyView(Button(action: setToZip){
+            ZStack{
+                Image(systemName: "circle.fill")
+                    .foregroundColor(.blue)
+                    .opacity(0.75)
+                Text("T")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                Text("Totals")
+                    .font(.caption2)
+                    .offset(x:-1, y:17)
+                    .foregroundColor(.blue)
+            }
+        })
+    }
+    
+    
+    
     
     
     private var showTotalsButton: some View {
@@ -125,6 +160,10 @@ struct ScoreEntryScreen: View {
     private func setToPar () {
         scoreEntryVM.scoreButton.toggle()
     }
+    private func setToZip () {
+        scoreEntryVM.zipButton.toggle()
+    }
+    
     var body: some View {
         ZStack{
 //            Text(needsRefresh.description)
@@ -516,17 +555,40 @@ struct ScoreEntryScreen: View {
                     }
                 }
             }
+            
             if scoreEntryVM.scoreButton == false {
                 ToolbarItem(placement: .navigationBarLeading){
                     showTotalsButton
+                        .frame(width: 40)
                 }
             }
             
             if scoreEntryVM.scoreButton {
                 ToolbarItem(placement: .navigationBarLeading){
                     showToParButton
+                        .frame(width: 40)
                 }
             }
+            
+            
+            if scoreEntryVM.zipButton == false {
+                ToolbarItem(placement: .navigationBarLeading){
+                    showZipPointsButton
+                        .frame(width: 40)
+                }
+            }
+            
+            if scoreEntryVM.zipButton {
+                ToolbarItem(placement: .navigationBarLeading){
+                    showTotalPointsButton
+                        .frame(width: 40)
+                }
+            }
+            
+            
+            
+            
+            
             }
         
         
