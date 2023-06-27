@@ -38,66 +38,69 @@ struct ScorecardScreen: View {
     var body: some View {
       
         GeometryReader{geo in
-        
+       
             List{
-                HStack(spacing: 5){
+                HStack(spacing: 15){
                     Group{
+                        
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
+//                            Spacer()
+//                                .frame(width: geo.size.width * 0.0001)
                             Text($0.player?.Initials() ?? "")
                         }
                     }
                     .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
                 }
-                .offset(x: geo.size.width * 0.31)
+                .offset(x: geo.size.width * 0.35)
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
                 .listRowBackground(darkTeal)
+                
                 let front9Holes = Array(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray ?? []).prefix(9)
-                
-                
-                
+               
                 ForEach(0..<front9Holes.count, id: \.self) {holeIndex in
-                    HStack(spacing:0){
+                    HStack(spacing:1){
                        
                         Text(Int(front9Holes[holeIndex].number).formatted())
-                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
-                        
+                            
                         Text(Int(front9Holes[holeIndex].distance).formatted())
-                            .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.12, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
                         
                         Text(Int(front9Holes[holeIndex].par).formatted())
-                            .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
                        
                         Text(Int(front9Holes[holeIndex].strokeIndex).formatted())
-                            .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.05)
                             .foregroundColor(burntOrange)
                            // .background(.blue)
                  
                         switch currentGF.assignShotsRecd {
                         case .Indiv:
-                            HStack(spacing:5){
+                            HStack(spacing:15){
                                 CompetitorScores(holeIndex: holeIndex, teamAssignment: .Indiv, totalType: .hole)
                                 
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 .offset(x: geo.size.width * 0.026)
                             }
                         case .TeamsAB:
                             
                             HStack(spacing:0){
-//                                Spacer()
-//                                    .frame(width: geo.size.width * 0.011)
-                                
-                                    
+//
                                     CompetitorScores(holeIndex: holeIndex, teamAssignment: .TeamsAB, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamAScoresArray)
-                                        .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.03, alignment: .center)
+                                        .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.05, alignment: .center)
                                         .background(.red)
                                         .offset(x: geo.size.width * 0.015)
                                        
                                     CompetitorScores(holeIndex: holeIndex, teamAssignment: .TeamsAB, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamBScoresArray)
-                                        .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.03, alignment: .center)
+                                        .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.05, alignment: .center)
                                         .background(.red)
                                         .offset(x: geo.size.width * 0.026)
                                 if scoreEntryVM.currentGame.game.teamAScoresArray[holeIndex].scoreCommitted && scoreEntryVM.currentGame.game.teamBScoresArray[holeIndex].scoreCommitted {
@@ -115,7 +118,7 @@ struct ScorecardScreen: View {
                                 Group{
                                     CompetitorScores(holeIndex: holeIndex, teamAssignment: .TeamC, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamCScoresArray)
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 .offset(x: geo.size.width * 0.026)
                             }
                         }//switch
@@ -126,8 +129,10 @@ struct ScorecardScreen: View {
                     //hole summary front 9
                     HStack(spacing:0){
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalDistance() ?? 0))
-                            .frame(width:geo.size.width * 0.15)
+                            .font(.title3)
+                            .frame(width:geo.size.width * 0.18)
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalPar() ?? 0))
+                            .font(.title3)
                             .frame(width:geo.size.width * 0.065)
                     }
                     .foregroundColor(darkTeal)
@@ -137,12 +142,12 @@ struct ScorecardScreen: View {
                 
                     switch currentGF.assignShotsRecd{
                     case .Indiv:
-                        HStack(spacing: 5){
+                        HStack(spacing: 15){
                             Group{
                                
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
                             }//Group
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }//HStack
                         
                         .offset(x: geo.size.width * 0.095)
@@ -159,7 +164,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamsAB, totalType: .frontNine, subTotalGross: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalGrossScore_front9()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalStablefordPoints_front9()))
                          
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -175,7 +180,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamC, totalType: .frontNine, subTotalGross: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalGrossScore_front9()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalStablefordPoints_front9()))
 
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -190,35 +195,39 @@ struct ScorecardScreen: View {
                 let back9Holes = Array(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray ?? []).suffix(9)
                 
                 ForEach(0..<back9Holes.count, id: \.self) {holeIndex in
-                    HStack(spacing:0){
+                    HStack(spacing:1){
                        
                         Text(Int(back9Holes[holeIndex + 9].number).formatted())
-                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
                        
                         Text(Int(back9Holes[holeIndex + 9].distance).formatted())
-                            .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.12, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
                        
                         Text(Int(back9Holes[holeIndex + 9].par).formatted())
-                            .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
                         
                         Text(Int(back9Holes[holeIndex + 9].strokeIndex).formatted())
-                            .frame(width: geo.size.width * 0.075, height: geo.size.height * 0.03)
+                            .font(.title3)
+                            .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.05)
                             .foregroundColor(burntOrange)
                         
                         switch currentGF.assignShotsRecd {
                             
                         case .Indiv:
                         
-                            HStack(spacing:5){
+                            HStack(spacing:15){
                                 Group{
                                     CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .Indiv, totalType: .hole)
 //
                                 }
                                 .foregroundColor(.blue)
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 .offset(x: geo.size.width * 0.026)
                             }
                             
@@ -231,7 +240,7 @@ struct ScorecardScreen: View {
                                     CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .TeamsAB, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamAScoresArray)
                                     CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .TeamsAB, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamBScoresArray)
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 .offset(x: geo.size.width * 0.026)
                             }
                         
@@ -242,7 +251,7 @@ struct ScorecardScreen: View {
                                 Group{
                                     CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .TeamC, totalType: .hole, teamScoreArray: scoreEntryVM.currentGame.game.teamCScoresArray)
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 .offset(x: geo.size.width * 0.026)
                                 
                             }
@@ -255,8 +264,10 @@ struct ScorecardScreen: View {
       
                         HStack(spacing:0){
                             Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_back9.TotalDistance() ?? 0))
-                                .frame(width:geo.size.width * 0.15)
+                                .font(.title3)
+                                .frame(width:geo.size.width * 0.18)
                             Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_back9.TotalPar() ?? 0))
+                                .font(.title3)
                                 .frame(width:geo.size.width * 0.065)
                         }
                         .foregroundColor(darkTeal)
@@ -267,12 +278,12 @@ struct ScorecardScreen: View {
                         switch currentGF.assignShotsRecd {
                             
                         case .Indiv:
-                            HStack(spacing: 5){
+                            HStack(spacing: 15){
                                 Group{
 
                                     CompetitorScores(teamAssignment: .Indiv, totalType: .backNine)
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             }
                             .offset(x: geo.size.width * 0.095)
                             .foregroundColor(.blue)
@@ -289,7 +300,7 @@ struct ScorecardScreen: View {
                                         CompetitorScores(teamAssignment: .TeamsAB, totalType: .backNine, subTotalGross: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalGrossScore_back9()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalStablefordPoints_back9()))
                                   
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 
                             }
                             .offset(x: geo.size.width * 0.12)
@@ -305,7 +316,7 @@ struct ScorecardScreen: View {
                                    
                              
                                 }
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                                 
                             }
                             .offset(x: geo.size.width * 0.12)
@@ -321,9 +332,11 @@ struct ScorecardScreen: View {
                     //hole summary front 9
                     HStack(spacing:0){
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalDistance() ?? 0))
-                            .frame(width:geo.size.width * 0.15)
+                            .font(.title3)
+                            .frame(width:geo.size.width * 0.18)
                             
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalPar() ?? 0))
+                            .font(.title3)
                             .frame(width:geo.size.width * 0.065)
                     }
                     .foregroundColor(darkTeal)
@@ -333,12 +346,12 @@ struct ScorecardScreen: View {
                     // players fromt 9 totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 5){
+                        HStack(spacing: 15){
                             Group{
                                
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }
                         .offset(x: geo.size.width * 0.095)
                         .foregroundColor(.blue)
@@ -354,7 +367,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamsAB, totalType: .frontNine, subTotalGross: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalGrossScore_front9()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalStablefordPoints_front9()))
                   
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -368,7 +381,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamC, totalType: .frontNine, subTotalGross: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalGrossScore_front9()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalStablefordPoints_front9()))
 
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -383,8 +396,10 @@ struct ScorecardScreen: View {
                     //hole summary overall
                     HStack(spacing:0){
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.TotalDistance() ?? 0))
-                            .frame(width:geo.size.width * 0.15)
+                            .font(.title3)
+                            .frame(width:geo.size.width * 0.18)
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.TotalPar() ?? 0))
+                            .font(.title3)
                             .frame(width:geo.size.width * 0.065)
                     }
                     .foregroundColor(darkTeal)
@@ -396,12 +411,12 @@ struct ScorecardScreen: View {
                     // players overall totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 5){
+                        HStack(spacing: 15){
                             Group{
                                // CompetitorScores_IndivTotal(competitors: scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF))
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .overall)
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }
                         .offset(x: geo.size.width * 0.095)
                         .foregroundColor(.blue)
@@ -417,7 +432,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamsAB, totalType: .overall, subTotalGross: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalGrossScore()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamBScoresArray.TotalStablefordPoints()))
 
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -431,7 +446,7 @@ struct ScorecardScreen: View {
                                 CompetitorScores(teamAssignment: .TeamC, totalType: .overall, subTotalGross: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalGrossScore()), subTotalPoints: Int(scoreEntryVM.currentGame.game.teamCScoresArray.TotalStablefordPoints()))
 
                             }
-                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                            .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             
                         }
                         .offset(x: geo.size.width * 0.12)
@@ -443,16 +458,16 @@ struct ScorecardScreen: View {
                 .listRowBackground(totalsTeal)
                 
                 
-                HStack(spacing: 5){
+                HStack(spacing: 15){
                     Group{
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
                             Text($0.player?.Initials() ?? "")
                         }
                            
                     }
-                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
+                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                 }
-                .offset(x: geo.size.width * 0.31)
+                .offset(x: geo.size.width * 0.35)
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
                

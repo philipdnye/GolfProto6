@@ -30,12 +30,12 @@ struct CompetitorScores: View {
                         if competitor.competitorScoresArray[holeIndex].scoreCommitted {
                             if competitor.competitorScoresArray[holeIndex].grossScore < 10 {
                                 Text(competitor.competitorScoresArray[holeIndex].grossScore.formatted())
-                                    .font(.callout)
+                                    .font(.title2)
                                     .foregroundColor(.blue)
                                     .zIndex(1)
                             } else {
                                 Text(competitor.competitorScoresArray[holeIndex].grossScore.formatted())
-                                    .font(.caption)
+                                    .font(.callout)
                                     .foregroundColor(.blue)
                                     .zIndex(1)
                                 
@@ -44,14 +44,14 @@ struct CompetitorScores: View {
    
                                 Text(competitor.competitorScoresArray[holeIndex].StablefordPointsNet().formatted())
                                     .foregroundColor(burntOrange)
-                                    .font(.caption)
-                                    .offset(x: 10, y: 5)
+                                    .font(.title3)
+                                    .offset(x: 12, y: 5)
                                     .zIndex(1)
                                 
 
                             
                             ShotsRecdDots(shotsReceived: Int(competitor.competitorScoresArray[holeIndex].shotsRecdHoleStroke))
-                                .offset(x: 2, y: 10)
+                                .offset(x: 2, y: 13.5)
                                 .zIndex(1)
                             // determine symbol to encase the score
                             
@@ -68,11 +68,13 @@ struct CompetitorScores: View {
                     if competitor.competitorScoresArray.TotalGrossScore_front9() != 0 {
                         ZStack{
                             Text(competitor.competitorScoresArray.TotalGrossScore_front9().formatted())
+                                .font(.title3)
                                 .foregroundColor(.blue)
                             Text(competitor.competitorScoresArray.TotalStablefordPoints_front9().formatted())
+                                .font(.title3)
                                 .foregroundColor(burntOrange)
-                                .font(.caption)
-                                .offset(x: 15, y: 10)
+                                
+                                .offset(x: 19, y: 15)
                             
                         }
                     }
@@ -84,11 +86,13 @@ struct CompetitorScores: View {
                     if competitor.competitorScoresArray.TotalGrossScore_back9() != 0 {
                         ZStack{
                             Text(competitor.competitorScoresArray.TotalGrossScore_back9().formatted())
+                                .font(.title3)
                                 .foregroundColor(.blue)
                             Text(competitor.competitorScoresArray.TotalStablefordPoints_back9().formatted())
+                                .font(.title3)
                                 .foregroundColor(burntOrange)
-                                .font(.caption)
-                                .offset(x: 15, y: 10)
+                              
+                                .offset(x: 19, y: 15)
                             
                         }
                     }
@@ -102,11 +106,13 @@ struct CompetitorScores: View {
                         
                         ZStack{
                             Text(competitor.competitorScoresArray.TotalGrossScore().formatted())
+                                .font(.title3)
                                 .foregroundColor(.blue)
                             Text(competitor.competitorScoresArray.TotalStablefordPoints().formatted())
+                                .font(.title3)
                                 .foregroundColor(burntOrange)
-                                .font(.caption)
-                                .offset(x: 15, y: 10)
+                               
+                                .offset(x: 19, y: 15)
                             
                         }
                     }

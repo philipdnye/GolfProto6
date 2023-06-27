@@ -15,41 +15,41 @@ struct ScoreSymbol: View {
             
         case _ where grossScoreToPar > 2:
             Image(systemName: "square")
-                .font(.system(size: 32, weight: .ultraLight))
+                .font(.system(size: 38, weight: .ultraLight))
                 .foregroundColor(burntOrange)
                 .offset(x: 5, y: 2)
             
             Image(systemName: "square")
-                .font(.system(size: 36, weight: .ultraLight))
+                .font(.system(size: 44, weight: .ultraLight))
                 .foregroundColor(burntOrange)
                 .offset(x: 5, y: 2)
             
         case _ where grossScoreToPar == 2:
             Image(systemName: "square")
-                .font(.system(size: 32, weight: .ultraLight))
+                .font(.system(size: 38, weight: .ultraLight))
                 .foregroundColor(darkTeal)
                 .offset(x: 5, y: 2)
             
             Image(systemName: "square")
-                .font(.system(size: 36, weight: .ultraLight))
+                .font(.system(size: 44, weight: .ultraLight))
                 .foregroundColor(darkTeal)
                 .offset(x: 5, y: 2)
             
         case _ where grossScoreToPar == 1:
             Image(systemName: "square")
-                .font(.system(size: 36, weight: .ultraLight))
+                .font(.system(size: 44, weight: .ultraLight))
                 .foregroundColor(darkTeal)
                 .offset(x: 5, y: 2)
 
         case _ where grossScoreToPar == -1:
             ZStack{
                 Image(systemName: "circle")
-                    .font(.system(size: 36, weight: .ultraLight))
+                    .font(.system(size: 44, weight: .ultraLight))
                     .foregroundColor(darkTeal)
                     .offset(x: 5, y: 2)
                     .zIndex(1)
                 Image(systemName: "circle.fill")
-                    .font(.system(size:36, weight: .ultraLight))
+                    .font(.system(size:44, weight: .ultraLight))
                     .foregroundColor(.orange)
                     .opacity(0.3)
                     .offset(x: 5, y: 2)
@@ -62,30 +62,30 @@ struct ScoreSymbol: View {
 
         case _ where grossScoreToPar == -2:
             Image(systemName: "circle")
-                .font(.system(size: 36, weight: .ultraLight))
+                .font(.system(size: 44, weight: .ultraLight))
                 .foregroundColor(darkTeal)
                 .offset(x: 5, y: 2)
                 .zIndex(1)
             Image(systemName: "circle.fill")
-                .font(.system(size:36, weight: .ultraLight))
+                .font(.system(size:44, weight: .ultraLight))
                 .foregroundColor(.orange)
                 .opacity(0.7)
                 .offset(x: 5, y: 2)
                 .zIndex(0)
             
             Image(systemName: "circle")
-                .font(.system(size: 32, weight: .ultraLight))
+                .font(.system(size: 38, weight: .ultraLight))
                 .foregroundColor(darkTeal)
                 .offset(x: 5, y: 2)
             
         case _ where grossScoreToPar < -2:
             Image(systemName: "circle")
-                .font(.system(size: 32, weight: .ultraLight))
+                .font(.system(size: 38, weight: .ultraLight))
                 .foregroundColor(burntOrange)
                 .offset(x: 5, y: 2)
             
             Image(systemName: "circle")
-                .font(.system(size: 36, weight: .ultraLight))
+                .font(.system(size: 44, weight: .ultraLight))
                 .foregroundColor(burntOrange)
                 .offset(x: 5, y: 2)
         default:

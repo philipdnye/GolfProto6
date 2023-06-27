@@ -14,7 +14,7 @@ struct ShotsRecdDots: View {
         HStack(spacing:0.75){
             ForEach(0..<shotsReceived, id: \.self){i in
                 Image(systemName: "circle.fill")
-                    .font(.system(size: 3, weight: .thin))
+                    .font(.system(size:3.5, weight: .thin))
                     .foregroundColor(.blue)
             }
         }
