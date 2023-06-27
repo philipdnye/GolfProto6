@@ -41,3 +41,12 @@ extension CompetitorScore {
         return netScore
     }
 }
+
+extension CompetitorScore {
+    func GrossScoreToPar () -> Int {
+        var gstp = 0
+        gstp = Int(self.grossScore - self.par)
+        return gstp
+    }
+}
+

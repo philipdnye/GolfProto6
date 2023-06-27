@@ -11,7 +11,7 @@ extension  TeamScore {
     func StablefordPointsNet () -> Int16 {
        var stablefordPoints: Int16 = 0
         stablefordPoints = self.par - (self.grossScore - self.shotsRecdHoleStroke) + 2
-        if stablefordPoints < -2 {
+        if stablefordPoints < 1 {
             stablefordPoints = 0
         }
        return stablefordPoints
@@ -21,7 +21,7 @@ extension  TeamScore {
     func StablefordPointsGross () -> Int16 {
        var stablefordPoints: Int16 = 0
         stablefordPoints = self.par - self.grossScore + 2
-        if stablefordPoints < -2 {
+        if stablefordPoints < 1 {
             stablefordPoints = 0
         }
        return stablefordPoints
