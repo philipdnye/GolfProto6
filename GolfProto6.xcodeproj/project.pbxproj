@@ -120,6 +120,8 @@
 		D40762CD2A3891F8009BFF1E /* CompetitorScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B62A3891F8009BFF1E /* CompetitorScoreViewModel.swift */; };
 		D40762CE2A3891F8009BFF1E /* TeamTeeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B72A3891F8009BFF1E /* TeamTeeBoxViewModel.swift */; };
 		D40762D12A38924B009BFF1E /* GolfDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40762CF2A38924B009BFF1E /* GolfDataModel.xcdatamodeld */; };
+		D4E61F2D2A4B170C00EEA826 /* ScoreSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */; };
+		D4E61F2F2A4B1F8300EEA826 /* ShotsRecdDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,6 +241,8 @@
 		D40762D02A38924B009BFF1E /* GolfDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GolfDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D40762D22A38941B009BFF1E /* GolfProto6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GolfProto6.entitlements; sourceTree = "<group>"; };
 		D40762D32A389447009BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSymbol.swift; sourceTree = "<group>"; };
+		D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsRecdDots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +533,8 @@
 			isa = PBXGroup;
 			children = (
 				D40762622A3891E6009BFF1E /* CompetitorScores.swift */,
+				D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */,
+				D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */,
 				D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */,
 				D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */,
 			);
@@ -679,6 +685,7 @@
 				D40761F92A38917F009BFF1E /* Extensions_TeamScore.swift in Sources */,
 				D40762C02A3891F8009BFF1E /* AddHoleViewModel.swift in Sources */,
 				D40762BB2A3891F8009BFF1E /* AddCourseViewModel.swift in Sources */,
+				D4E61F2F2A4B1F8300EEA826 /* ShotsRecdDots.swift in Sources */,
 				D40762902A3891E6009BFF1E /* AddGameScreen.swift in Sources */,
 				D40762732A3891E6009BFF1E /* TeeBoxListScreen.swift in Sources */,
 				D40762802A3891E6009BFF1E /* PlayerListRowItem.swift in Sources */,
@@ -754,6 +761,7 @@
 				D40761F42A38917F009BFF1E /* Extensions_Color.swift in Sources */,
 				D407626F2A3891E6009BFF1E /* EditCourseScreen.swift in Sources */,
 				D407627A2A3891E6009BFF1E /* HolesLayoutTotals.swift in Sources */,
+				D4E61F2D2A4B170C00EEA826 /* ScoreSymbol.swift in Sources */,
 				D40762C62A3891F8009BFF1E /* AddPlayerViewModel.swift in Sources */,
 				D40761CE2A3890F4009BFF1E /* GolfProto6App.swift in Sources */,
 				D407621B2A3891D4009BFF1E /* Club+CoreDataClass.swift in Sources */,

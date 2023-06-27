@@ -40,7 +40,7 @@ struct ScorecardScreen: View {
         GeometryReader{geo in
         
             List{
-                HStack(spacing: 0){
+                HStack(spacing: 5){
                     Group{
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
                             Text($0.player?.Initials() ?? "")
@@ -49,9 +49,9 @@ struct ScorecardScreen: View {
                     .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
                 }
                 .offset(x: geo.size.width * 0.31)
-                .foregroundColor(darkTeal)
+                .foregroundColor(.white)
                 .fontWeight(.semibold)
-                
+                .listRowBackground(darkTeal)
                 let front9Holes = Array(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray ?? []).prefix(9)
                 
                 
@@ -74,11 +74,11 @@ struct ScorecardScreen: View {
                         Text(Int(front9Holes[holeIndex].strokeIndex).formatted())
                             .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.03)
                             .foregroundColor(burntOrange)
-                            .background(.blue)
+                           // .background(.blue)
                  
                         switch currentGF.assignShotsRecd {
                         case .Indiv:
-                            HStack(spacing:0){
+                            HStack(spacing:5){
                                 CompetitorScores(holeIndex: holeIndex, teamAssignment: .Indiv, totalType: .hole)
                                 
                                 .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
@@ -103,30 +103,7 @@ struct ScorecardScreen: View {
                                 if scoreEntryVM.currentGame.game.teamAScoresArray[holeIndex].scoreCommitted && scoreEntryVM.currentGame.game.teamBScoresArray[holeIndex].scoreCommitted {
                                     HStack(spacing: 0){
                                         
-                                        
-                                            
-                                            
-                                          
-//                                            Text(scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).0)
-//                                                .frame(width: geo.size.width * 0.069, height: geo.size.height * 0.03, alignment: .center)
-//                                                .offset(x: geo.size.width * 0.21)
-//                                                .font(.caption)
-//                                                //.foregroundColor(burntOrange)
-//                                                .foregroundColor(Color[scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).3])
-//                                        Text(scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).1)
-//                                            .frame(width: geo.size.width * 0.069, height: geo.size.height * 0.03, alignment: .center)
-//                                            .offset(x: geo.size.width * 0.21)
-//                                            .font(.caption)
-//                                            //.foregroundColor(burntOrange)
-//                                            .foregroundColor(Color[scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).3])
-//                                        Text(scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).2)
-//                                            .frame(width: geo.size.width * 0.069, height: geo.size.height * 0.03, alignment: .center)
-//                                            .offset(x: geo.size.width * 0.21)
-//                                            .font(.caption)
-//                                            //.foregroundColor(burntOrange)
-//                                            .foregroundColor(Color[scoreEntryVM.currentGame.game.MatchResultHole1(currentGF: currentGF, holeIndex: holeIndex).3])
-                                           
-                                       
+               
                                     }
                                 }
                                 
@@ -155,12 +132,12 @@ struct ScorecardScreen: View {
                     }
                     .foregroundColor(darkTeal)
                     .fontWeight(.semibold)
-                  
+                    
                     // players front 9 totals
                 
                     switch currentGF.assignShotsRecd{
                     case .Indiv:
-                        HStack(spacing: 0){
+                        HStack(spacing: 5){
                             Group{
                                
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
@@ -208,6 +185,7 @@ struct ScorecardScreen: View {
                     }//switch
                     
                 }//totals HStack
+                .listRowBackground(veryLightTeal)
                 
                 let back9Holes = Array(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray ?? []).suffix(9)
                 
@@ -234,7 +212,7 @@ struct ScorecardScreen: View {
                             
                         case .Indiv:
                         
-                            HStack(spacing:0){
+                            HStack(spacing:5){
                                 Group{
                                     CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .Indiv, totalType: .hole)
 //
@@ -289,7 +267,7 @@ struct ScorecardScreen: View {
                         switch currentGF.assignShotsRecd {
                             
                         case .Indiv:
-                            HStack(spacing: 0){
+                            HStack(spacing: 5){
                                 Group{
 
                                     CompetitorScores(teamAssignment: .Indiv, totalType: .backNine)
@@ -337,23 +315,25 @@ struct ScorecardScreen: View {
                             
                         }
                     }//back 9 HStack
-               
+                    .listRowBackground(veryLightTeal)
                 // players front 9 totals
                 HStack(spacing:0){
                     //hole summary front 9
                     HStack(spacing:0){
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalDistance() ?? 0))
                             .frame(width:geo.size.width * 0.15)
+                            
                         Text (String(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray_front9.TotalPar() ?? 0))
                             .frame(width:geo.size.width * 0.065)
                     }
                     .foregroundColor(darkTeal)
                     .fontWeight(.semibold)
+                    
                   
                     // players fromt 9 totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 0){
+                        HStack(spacing: 5){
                             Group{
                                
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
@@ -397,7 +377,7 @@ struct ScorecardScreen: View {
                         
                     }
                 }//front 9 HStack
-                
+                .listRowBackground(veryLightTeal)
                 // players  totals
                 HStack(spacing:0){
                     //hole summary overall
@@ -416,7 +396,7 @@ struct ScorecardScreen: View {
                     // players overall totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 0){
+                        HStack(spacing: 5){
                             Group{
                                // CompetitorScores_IndivTotal(competitors: scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF))
                                 CompetitorScores(teamAssignment: .Indiv, totalType: .overall)
@@ -425,7 +405,7 @@ struct ScorecardScreen: View {
                         }
                         .offset(x: geo.size.width * 0.095)
                         .foregroundColor(.blue)
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                     
                     case .TeamsAB:
                         HStack(spacing: geo.size.width * 0.048) {
@@ -442,7 +422,7 @@ struct ScorecardScreen: View {
                         }
                         .offset(x: geo.size.width * 0.12)
                         
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                     case .TeamC:
                         HStack(spacing: geo.size.width * 0.048) {
                             Spacer()
@@ -456,14 +436,14 @@ struct ScorecardScreen: View {
                         }
                         .offset(x: geo.size.width * 0.12)
                         
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                         
                     }
                 } //overall total HStack
+                .listRowBackground(totalsTeal)
                 
                 
-                
-                HStack(spacing: 0){
+                HStack(spacing: 5){
                     Group{
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
                             Text($0.player?.Initials() ?? "")
@@ -473,10 +453,14 @@ struct ScorecardScreen: View {
                     .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.03)
                 }
                 .offset(x: geo.size.width * 0.31)
-                .foregroundColor(darkTeal)
+                .foregroundColor(.white)
                 .fontWeight(.semibold)
+               
+                
+                .listRowBackground(darkTeal)
                 
             }
+           
             
             
         }

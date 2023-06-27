@@ -28,94 +28,36 @@ struct CompetitorScores: View {
                     
                     ZStack{
                         if competitor.competitorScoresArray[holeIndex].scoreCommitted {
-                            Text(competitor.competitorScoresArray[holeIndex].grossScore.formatted())
-                                .foregroundColor(.blue)
-                            
-                            
-                            
-                           
-                            
-                            if competitor.competitorScoresArray[holeIndex].StablefordPointsNet() != 0 {
+                            if competitor.competitorScoresArray[holeIndex].grossScore < 10 {
+                                Text(competitor.competitorScoresArray[holeIndex].grossScore.formatted())
+                                    .font(.callout)
+                                    .foregroundColor(.blue)
+                                    .zIndex(1)
+                            } else {
+                                Text(competitor.competitorScoresArray[holeIndex].grossScore.formatted())
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                                    .zIndex(1)
+                                
+                                
+                            }
+   
                                 Text(competitor.competitorScoresArray[holeIndex].StablefordPointsNet().formatted())
                                     .foregroundColor(burntOrange)
                                     .font(.caption)
                                     .offset(x: 10, y: 5)
+                                    .zIndex(1)
                                 
-                            }
+
+                            
+                            ShotsRecdDots(shotsReceived: Int(competitor.competitorScoresArray[holeIndex].shotsRecdHoleStroke))
+                                .offset(x: 2, y: 10)
+                                .zIndex(1)
                             // determine symbol to encase the score
                             
-                            switch competitor.competitorScoresArray[holeIndex].GrossScoreToPar() {
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() > 2:
-                                Image(systemName: "square")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(burntOrange)
-                                    .offset(x: 5, y: 2)
-                                
-                                Image(systemName: "square")
-                                    .font(.system(size: 28, weight: .ultraLight))
-                                    .foregroundColor(burntOrange)
-                                    .offset(x: 5, y: 2)
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() == 2:
-                                Image(systemName: "square")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-                                Image(systemName: "square")
-                                    .font(.system(size: 28, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() == 1:
-                                Image(systemName: "square")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-//                                Image(systemName: "square")
-//                                    .font(.system(size: 28, weight: .ultraLight))
-//                                    .foregroundColor(darkTeal)
-//                                    .offset(x: 5, y: 2)
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() == -1:
-                                Image(systemName: "circle")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-//                                Image(systemName: "circle")
-//                                    .font(.system(size: 28, weight: .ultraLight))
-//                                    .foregroundColor(darkTeal)
-//                                    .offset(x: 5, y: 2)
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() == -2:
-                                Image(systemName: "circle")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-                                Image(systemName: "circle")
-                                    .font(.system(size: 28, weight: .ultraLight))
-                                    .foregroundColor(darkTeal)
-                                    .offset(x: 5, y: 2)
-                                
-                            case _ where competitor.competitorScoresArray[holeIndex].GrossScoreToPar() < -2:
-                                Image(systemName: "circle")
-                                    .font(.system(size: 32, weight: .ultraLight))
-                                    .foregroundColor(burntOrange)
-                                    .offset(x: 5, y: 2)
-                                
-                                Image(systemName: "circle")
-                                    .font(.system(size: 28, weight: .ultraLight))
-                                    .foregroundColor(burntOrange)
-                                    .offset(x: 5, y: 2)
-                            default:
-                                EmptyView()
-                            }
-                            
-                            
+                            ScoreSymbol(grossScoreToPar: competitor.competitorScoresArray[holeIndex].GrossScoreToPar())
+                                .zIndex(0)
+                           
                         }
                     }//ZStack
                     
