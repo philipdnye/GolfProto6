@@ -471,13 +471,18 @@ struct ScoreEntryScreen: View {
 
 
                     default:
-                       
-                        CurrentMatchScoreScreen(neeedsRefresh: $needsRefresh,game: game)
-                        
-                        .frame(width: geo.size.width * 0.95, height: 35)
-                        .offset(x: 0, y: geo.size.height * 0.93)
-                        .foregroundColor(darkTeal)
-
+                       //need to ensure here that matchplay, not strokeplay
+                        switch currentGF.playFormat {
+                            
+                        case .matchplay:
+                            CurrentMatchScoreScreen(neeedsRefresh: $needsRefresh,game: game)
+                                .frame(width: geo.size.width * 0.95, height: 35)
+                                .offset(x: 0, y: geo.size.height * 0.93)
+                                .foregroundColor(darkTeal)
+                        case .strokeplay:
+                            EmptyView()
+                            
+                        }
                     }//playformat switch
                 case .TeamsAB:
                     switch currentGF.format {
