@@ -58,25 +58,25 @@ struct CompetitorScoresMatch: View {
                            
                             if competitor.competitorScoresArray[holeIndex].NetScoreMatch() == scoreEntryVM.currentGame.game.LowScoreByHole4BBB(holeIndex: holeIndex){
                                 ZStack{
-                                    Image(systemName: "circle")
-                                        .font(.system(size: 44, weight: .ultraLight))
-                                        .foregroundColor(darkTeal)
-                                        .offset(x: 5, y: 2)
-                                        .zIndex(1)
-//                                    Image(systemName: "circle.fill")
-//                                        .font(.system(size:44, weight: .ultraLight))
-//                                        .foregroundColor(.orange)
-//                                        .opacity(0.3)
-//                                        .offset(x: 5, y: 2)
-//                                        .zIndex(0)
+                                    
+                                    
+                                        
+                                       
+                                    
+                                        Image(systemName: "square.fill")
+                                            .font(.system(size: 36, weight: .ultraLight))
+                                            .foregroundColor(veryLightTeal)
+                                            .offset(x: 5, y: 2)
+                                            .zIndex(0)
+                                   
                                     
                                 }
                             }
-                            
+                           
                             
                         }
                     }//ZStack
-                    
+                   
                 }//Foreach
             case .frontNine:
                 ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self){ competitor in

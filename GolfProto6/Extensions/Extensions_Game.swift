@@ -743,9 +743,9 @@ extension Game {
             
             switch currentMatchScore {
             case 0:
-                result0 = " - "
+                result0 = ""
                 result1 = "A/S"
-                result2 = " - "
+                result2 = ""
                 textColor = "green"
                 //result[3] = holesRemainingString
             case _ where currentMatchScore > 0:

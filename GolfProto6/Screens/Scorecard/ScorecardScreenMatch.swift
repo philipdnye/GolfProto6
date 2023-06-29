@@ -40,25 +40,25 @@ struct ScorecardScreenMatch: View {
                             .font(.headline)
                             .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
-                            .background(.yellow)
+//                            .background(.yellow)
                             
                         Text(Int(front9Holes[holeIndex].distance).formatted())
                             .font(.headline)
                             .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
-                            .background(.yellow)
+//                            .background(.yellow)
                         
                         Text(Int(front9Holes[holeIndex].par).formatted())
                             .font(.headline)
                             .frame(width: geo.size.width * 0.04, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
-                            .background(.yellow)
+//                            .background(.yellow)
                        
                         Text(Int(front9Holes[holeIndex].strokeIndex).formatted())
                             .font(.headline)
                             .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.05)
                             .foregroundColor(burntOrange)
-                            .background(.yellow)
+//                            .background(.yellow)
                            // .background(.blue)
                  
                         switch currentGF.assignShotsRecd {
@@ -67,14 +67,14 @@ struct ScorecardScreenMatch: View {
                                 CompetitorScoresMatch(holeIndex: holeIndex, teamAssignment: .Indiv, totalType: .hole)
                                 
                                 .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
-                                .background(.yellow)
+                                //.background(.yellow)
                                 .offset(x: geo.size.width * 0.026)
                               
                                 // shows the lowest net score by hole
-                                Text(scoreEntryVM.currentGame.game.LowScoreByHole4BBB(holeIndex: holeIndex).formatted())
-                                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
-                                    .background(.yellow)
-                                    .offset(x: geo.size.width * 0.026)
+//                                Text(scoreEntryVM.currentGame.game.LowScoreByHole4BBB(holeIndex: holeIndex).formatted())
+//                                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
+//                                    .background(.yellow)
+//                                    .offset(x: geo.size.width * 0.026)
                             }
                         case .TeamsAB:
                             
@@ -108,6 +108,32 @@ struct ScorecardScreenMatch: View {
                                 .offset(x: geo.size.width * 0.026)
                             }
                         }//switch
+                        //string version of score by hole
+                        
+//                        Text(scoreEntryVM.currentGame.game.CalcCurrentMatchScore(currentGF: currentGF, byHole: true, holeIndex: holeIndex+1).0.formatted())
+//                            .offset(x: 20, y: 0)
+                        Divider()
+                                        .frame(width: 1)
+
+                                        .overlay(.gray)
+                                        .offset(x: 17, y:0)
+
+                        HStack(spacing:0){
+                            Text(scoreEntryVM.currentGame.game.CurrentMatchScoreByHoleString(currentMatchScore: scoreEntryVM.currentGame.game.CalcCurrentMatchScore(currentGF: currentGF, byHole: true, holeIndex: holeIndex+1).0, holesPlayed: holeIndex, currentGF: currentGF).0)
+                                
+                           
+                                
+                                .offset(x: 20, y: 0)
+                                .foregroundColor(.blue)
+                                .fontWeight(.semibold)
+                            Text(scoreEntryVM.currentGame.game.CurrentMatchScoreByHoleString(currentMatchScore: scoreEntryVM.currentGame.game.CalcCurrentMatchScore(currentGF: currentGF, byHole: true, holeIndex: holeIndex+1).0, holesPlayed: holeIndex, currentGF: currentGF).1)
+                                .offset(x: 45, y: 0)
+                            Text(scoreEntryVM.currentGame.game.CurrentMatchScoreByHoleString(currentMatchScore: scoreEntryVM.currentGame.game.CalcCurrentMatchScore(currentGF: currentGF, byHole: true, holeIndex: holeIndex+1).0, holesPlayed: holeIndex, currentGF: currentGF).2)
+                              
+                                .offset(x: 70, y: 0)
+                                .foregroundColor(.red)
+                                .fontWeight(.semibold)
+                        }
                     }
             }//foreach
                
