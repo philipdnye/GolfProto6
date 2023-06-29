@@ -1,13 +1,13 @@
 //
-//  CompetitorScores.swift
-//  GolfProto05
+//  CompetitorScoresMatch.swift
+//  GolfProto6
 //
-//  Created by Philip Nye on 12/05/2023.
+//  Created by Philip Nye on 27/06/2023.
 //
 
 import SwiftUI
 
-struct CompetitorScores: View {
+struct CompetitorScoresMatch: View {
     @EnvironmentObject var scoreEntryVM: ScoreEntryViewModel
     @EnvironmentObject var currentGF: CurrentGameFormat
     var holeIndex: Int = 0
@@ -16,9 +16,7 @@ struct CompetitorScores: View {
     var teamScoreArray: [TeamScore] = []
     var subTotalGross: Int = 0
     var subTotalPoints: Int = 0
-
     var body: some View {
-        
         switch currentGF.assignShotsRecd {
         case .Indiv:
             switch totalType {
@@ -42,22 +40,40 @@ struct CompetitorScores: View {
                                 
                             }
    
-                                Text(competitor.competitorScoresArray[holeIndex].StablefordPointsNet().formatted())
+                                Text(competitor.competitorScoresArray[holeIndex].NetScoreMatch().formatted())
                                     .foregroundColor(burntOrange)
-                                    .font(.title3)
-                                    .offset(x: 12, y: 5)
+                                    .font(.headline)
+                                    .offset(x: 11, y: 5)
                                     .zIndex(1)
                                 
 
                             
-                            ShotsRecdDots(shotsReceived: Int(competitor.competitorScoresArray[holeIndex].shotsRecdHoleStroke))
+                            ShotsRecdDots(shotsReceived: Int(competitor.competitorScoresArray[holeIndex].shotsRecdHoleMatch))
                                 .offset(x: 2, y: 13.5)
                                 .zIndex(1)
                             // determine symbol to encase the score
                             
-                            ScoreSymbol(grossScoreToPar: competitor.competitorScoresArray[holeIndex].GrossScoreToPar())
+                            //ScoreSymbol(grossScoreToPar: competitor.competitorScoresArray[holeIndex].GrossScoreToPar())
                                 .zIndex(0)
                            
+                            if competitor.competitorScoresArray[holeIndex].NetScoreMatch() == scoreEntryVM.currentGame.game.LowScoreByHole4BBB(holeIndex: holeIndex){
+                                ZStack{
+                                    Image(systemName: "circle")
+                                        .font(.system(size: 44, weight: .ultraLight))
+                                        .foregroundColor(darkTeal)
+                                        .offset(x: 5, y: 2)
+                                        .zIndex(1)
+//                                    Image(systemName: "circle.fill")
+//                                        .font(.system(size:44, weight: .ultraLight))
+//                                        .foregroundColor(.orange)
+//                                        .opacity(0.3)
+//                                        .offset(x: 5, y: 2)
+//                                        .zIndex(0)
+                                    
+                                }
+                            }
+                            
+                            
                         }
                     }//ZStack
                     
@@ -70,11 +86,11 @@ struct CompetitorScores: View {
                             Text(competitor.competitorScoresArray.TotalGrossScore_front9().formatted())
                                 .font(.title3)
                                 .foregroundColor(.blue)
-                            Text(competitor.competitorScoresArray.TotalStablefordPoints_front9().formatted())
-                                .font(.title3)
-                                .foregroundColor(burntOrange)
-                                
-                                .offset(x: 21, y: 16)
+//                            Text(competitor.competitorScoresArray.TotalStablefordPoints_front9().formatted())
+//                                .font(.title3)
+//                                .foregroundColor(burntOrange)
+//
+//                                .offset(x: 21, y: 16)
                             
                         }
                     }
@@ -88,11 +104,11 @@ struct CompetitorScores: View {
                             Text(competitor.competitorScoresArray.TotalGrossScore_back9().formatted())
                                 .font(.title3)
                                 .foregroundColor(.blue)
-                            Text(competitor.competitorScoresArray.TotalStablefordPoints_back9().formatted())
-                                .font(.title3)
-                                .foregroundColor(burntOrange)
-                              
-                                .offset(x: 21, y: 16)
+//                            Text(competitor.competitorScoresArray.TotalStablefordPoints_back9().formatted())
+//                                .font(.title3)
+//                                .foregroundColor(burntOrange)
+//
+//                                .offset(x: 21, y: 16)
                             
                         }
                     }
@@ -108,12 +124,12 @@ struct CompetitorScores: View {
                             Text(competitor.competitorScoresArray.TotalGrossScore().formatted())
                                 .font(.title3)
                                 .foregroundColor(.blue)
-                            Text(competitor.competitorScoresArray.TotalStablefordPoints().formatted())
-                                .font(.title3)
-                                .foregroundColor(burntOrange)
-                               
-                                .offset(x: 21, y: 16)
-                            
+//                            Text(competitor.competitorScoresArray.TotalStablefordPoints().formatted())
+//                                .font(.title3)
+//                                .foregroundColor(burntOrange)
+//                               
+//                                .offset(x: 21, y: 16)
+//                            
                         }
                     }
                     
@@ -221,9 +237,9 @@ struct CompetitorScores: View {
     }
 }
 
-struct CompetitorScores_Previews: PreviewProvider {
+struct CompetitorScoresMatch_Previews: PreviewProvider {
     static var previews: some View {
-        CompetitorScores(holeIndex: 0, teamAssignment: .Indiv, totalType: .overall, teamScoreArray: [])
+        CompetitorScoresMatch()
             .environmentObject(ScoreEntryViewModel())
             .environmentObject(CurrentGameFormat())
     }

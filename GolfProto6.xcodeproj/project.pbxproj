@@ -92,8 +92,8 @@
 		D40762922A3891E6009BFF1E /* GameListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407625F2A3891E6009BFF1E /* GameListScreen.swift */; };
 		D40762932A3891E6009BFF1E /* GameListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762602A3891E6009BFF1E /* GameListRowItem.swift */; };
 		D40762942A3891E6009BFF1E /* CompetitorScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762622A3891E6009BFF1E /* CompetitorScores.swift */; };
-		D40762952A3891E6009BFF1E /* ScorecardScreenStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */; };
-		D40762962A3891E6009BFF1E /* ScoreCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */; };
+		D40762952A3891E6009BFF1E /* ScorecardScreenMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762632A3891E6009BFF1E /* ScorecardScreenMatch.swift */; };
+		D40762962A3891E6009BFF1E /* ScoreCardScreenStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762642A3891E6009BFF1E /* ScoreCardScreenStroke.swift */; };
 		D407629A2A3891F0009BFF1E /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762982A3891F0009BFF1E /* UIColorTransformer.swift */; };
 		D407629B2A3891F0009BFF1E /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762992A3891F0009BFF1E /* UIImageTransformer.swift */; };
 		D40762B82A3891F8009BFF1E /* ScoreEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407629E2A3891F8009BFF1E /* ScoreEntryViewModel.swift */; };
@@ -120,6 +120,7 @@
 		D40762CD2A3891F8009BFF1E /* CompetitorScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B62A3891F8009BFF1E /* CompetitorScoreViewModel.swift */; };
 		D40762CE2A3891F8009BFF1E /* TeamTeeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40762B72A3891F8009BFF1E /* TeamTeeBoxViewModel.swift */; };
 		D40762D12A38924B009BFF1E /* GolfDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40762CF2A38924B009BFF1E /* GolfDataModel.xcdatamodeld */; };
+		D454490A2A4B5A5B003077FD /* CompetitorScoresMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45449092A4B5A5B003077FD /* CompetitorScoresMatch.swift */; };
 		D4E61F2D2A4B170C00EEA826 /* ScoreSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */; };
 		D4E61F2F2A4B1F8300EEA826 /* ShotsRecdDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */; };
 /* End PBXBuildFile section */
@@ -211,8 +212,8 @@
 		D407625F2A3891E6009BFF1E /* GameListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListScreen.swift; sourceTree = "<group>"; };
 		D40762602A3891E6009BFF1E /* GameListRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListRowItem.swift; sourceTree = "<group>"; };
 		D40762622A3891E6009BFF1E /* CompetitorScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitorScores.swift; sourceTree = "<group>"; };
-		D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorecardScreenStroke.swift; sourceTree = "<group>"; };
-		D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardScreen.swift; sourceTree = "<group>"; };
+		D40762632A3891E6009BFF1E /* ScorecardScreenMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorecardScreenMatch.swift; sourceTree = "<group>"; };
+		D40762642A3891E6009BFF1E /* ScoreCardScreenStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardScreenStroke.swift; sourceTree = "<group>"; };
 		D40762982A3891F0009BFF1E /* UIColorTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 		D40762992A3891F0009BFF1E /* UIImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 		D407629E2A3891F8009BFF1E /* ScoreEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntryViewModel.swift; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 		D40762D02A38924B009BFF1E /* GolfDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GolfDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D40762D22A38941B009BFF1E /* GolfProto6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GolfProto6.entitlements; sourceTree = "<group>"; };
 		D40762D32A389447009BFF1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D45449092A4B5A5B003077FD /* CompetitorScoresMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitorScoresMatch.swift; sourceTree = "<group>"; };
 		D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSymbol.swift; sourceTree = "<group>"; };
 		D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsRecdDots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -533,10 +535,11 @@
 			isa = PBXGroup;
 			children = (
 				D40762622A3891E6009BFF1E /* CompetitorScores.swift */,
+				D45449092A4B5A5B003077FD /* CompetitorScoresMatch.swift */,
 				D4E61F2E2A4B1F8300EEA826 /* ShotsRecdDots.swift */,
 				D4E61F2C2A4B170C00EEA826 /* ScoreSymbol.swift */,
-				D40762632A3891E6009BFF1E /* ScorecardScreenStroke.swift */,
-				D40762642A3891E6009BFF1E /* ScoreCardScreen.swift */,
+				D40762632A3891E6009BFF1E /* ScorecardScreenMatch.swift */,
+				D40762642A3891E6009BFF1E /* ScoreCardScreenStroke.swift */,
 			);
 			path = Scorecard;
 			sourceTree = "<group>";
@@ -728,7 +731,7 @@
 				D40762CA2A3891F8009BFF1E /* TeamShotsViewModel.swift in Sources */,
 				D40762242A3891D4009BFF1E /* Game+CoreDataProperties.swift in Sources */,
 				D40762BD2A3891F8009BFF1E /* ClubListViewModel.swift in Sources */,
-				D40762962A3891E6009BFF1E /* ScoreCardScreen.swift in Sources */,
+				D40762962A3891E6009BFF1E /* ScoreCardScreenStroke.swift in Sources */,
 				D40762CE2A3891F8009BFF1E /* TeamTeeBoxViewModel.swift in Sources */,
 				D40761F72A38917F009BFF1E /* Extensions_CompetitorScore.swift in Sources */,
 				D40762752A3891E6009BFF1E /* TeeBoxListRowItem.swift in Sources */,
@@ -750,6 +753,7 @@
 				D40762252A3891D4009BFF1E /* Club+CoreDataProperties.swift in Sources */,
 				D407626A2A3891E6009BFF1E /* ScoreEntryTeamRowButtons.swift in Sources */,
 				D40762C22A3891F8009BFF1E /* HoleListViewModel.swift in Sources */,
+				D454490A2A4B5A5B003077FD /* CompetitorScoresMatch.swift in Sources */,
 				D407626C2A3891E6009BFF1E /* CurrentMatchScoreScreen.swift in Sources */,
 				D407627D2A3891E6009BFF1E /* ClubListScreen.swift in Sources */,
 				D40761FE2A38917F009BFF1E /* Extensions_HoleArray.swift in Sources */,
@@ -787,7 +791,7 @@
 				D40762CB2A3891F8009BFF1E /* TeamScoreViewModel.swift in Sources */,
 				D407627B2A3891E6009BFF1E /* ClubListRowItem.swift in Sources */,
 				D407627E2A3891E6009BFF1E /* AddClubScreen.swift in Sources */,
-				D40762952A3891E6009BFF1E /* ScorecardScreenStroke.swift in Sources */,
+				D40762952A3891E6009BFF1E /* ScorecardScreenMatch.swift in Sources */,
 				D40762202A3891D4009BFF1E /* TeeBox+CoreDataClass.swift in Sources */,
 				D40762892A3891E6009BFF1E /* ChangeCompetitorTeeBoxSheet.swift in Sources */,
 				D40762932A3891E6009BFF1E /* GameListRowItem.swift in Sources */,

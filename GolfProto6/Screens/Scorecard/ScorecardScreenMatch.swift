@@ -1,46 +1,21 @@
 //
-//  ScoreCardScreenStroke.swift
-//  GolfProto04
+//  ScorecardScreenMatch.swift
+//  GolfProto05
 //
-//  Created by Philip Nye on 27/04/2023.
+//  Created by Philip Nye on 14/05/2023.
 //
 
 import SwiftUI
 
-enum TotalType: Int, CaseIterable {
-    case hole = 0
-    case frontNine = 1
-    case backNine = 2
-    case overall = 3
-    
-    func stringValue() -> String{
-        switch(self){
-        case .hole:
-            return "individual hole"
-        case .frontNine:
-            return "front 9"
-        case .backNine:
-            return "back 9"
-        case .overall:
-            return "overall"
-            
-        }
-    }
-}
-    
-
-
-
-struct ScorecardScreenStroke: View {
+struct ScorecardScreenMatch: View {
     @EnvironmentObject var scoreEntryVM: ScoreEntryViewModel
     @EnvironmentObject var currentGF: CurrentGameFormat
     
     var body: some View {
-      
         GeometryReader{geo in
        
             List{
-                HStack(spacing: 15){
+                HStack(spacing: 0){
                     Group{
                         
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
@@ -59,36 +34,47 @@ struct ScorecardScreenStroke: View {
                 let front9Holes = Array(scoreEntryVM.currentGame.game.scoreEntryTeeBox?.holesArray ?? []).prefix(9)
                
                 ForEach(0..<front9Holes.count, id: \.self) {holeIndex in
-                    HStack(spacing:1){
+                    HStack(spacing:0){
                        
                         Text(Int(front9Holes[holeIndex].number).formatted())
-                            .font(.title3)
-                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.05)
-                            .foregroundColor(darkTeal)
-                            
-                        Text(Int(front9Holes[holeIndex].distance).formatted())
-                            .font(.title3)
-                            .frame(width: geo.size.width * 0.12, height: geo.size.height * 0.05)
-                            .foregroundColor(darkTeal)
-                        
-                        Text(Int(front9Holes[holeIndex].par).formatted())
-                            .font(.title3)
+                            .font(.headline)
                             .frame(width: geo.size.width * 0.05, height: geo.size.height * 0.05)
                             .foregroundColor(darkTeal)
+                            .background(.yellow)
+                            
+                        Text(Int(front9Holes[holeIndex].distance).formatted())
+                            .font(.headline)
+                            .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.05)
+                            .foregroundColor(darkTeal)
+                            .background(.yellow)
+                        
+                        Text(Int(front9Holes[holeIndex].par).formatted())
+                            .font(.headline)
+                            .frame(width: geo.size.width * 0.04, height: geo.size.height * 0.05)
+                            .foregroundColor(darkTeal)
+                            .background(.yellow)
                        
                         Text(Int(front9Holes[holeIndex].strokeIndex).formatted())
-                            .font(.title3)
-                            .frame(width: geo.size.width * 0.07, height: geo.size.height * 0.05)
+                            .font(.headline)
+                            .frame(width: geo.size.width * 0.06, height: geo.size.height * 0.05)
                             .foregroundColor(burntOrange)
+                            .background(.yellow)
                            // .background(.blue)
                  
                         switch currentGF.assignShotsRecd {
                         case .Indiv:
-                            HStack(spacing:15){
-                                CompetitorScores(holeIndex: holeIndex, teamAssignment: .Indiv, totalType: .hole)
+                            HStack(spacing:0){
+                                CompetitorScoresMatch(holeIndex: holeIndex, teamAssignment: .Indiv, totalType: .hole)
                                 
                                 .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
+                                .background(.yellow)
                                 .offset(x: geo.size.width * 0.026)
+                              
+                                // shows the lowest net score by hole
+                                Text(scoreEntryVM.currentGame.game.LowScoreByHole4BBB(holeIndex: holeIndex).formatted())
+                                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
+                                    .background(.yellow)
+                                    .offset(x: geo.size.width * 0.026)
                             }
                         case .TeamsAB:
                             
@@ -142,10 +128,10 @@ struct ScorecardScreenStroke: View {
                 
                     switch currentGF.assignShotsRecd{
                     case .Indiv:
-                        HStack(spacing: 15){
+                        HStack(spacing: 0){
                             Group{
                                
-                                CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
+                                CompetitorScoresMatch(teamAssignment: .Indiv, totalType: .frontNine)
                             }//Group
                             .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }//HStack
@@ -221,9 +207,9 @@ struct ScorecardScreenStroke: View {
                             
                         case .Indiv:
                         
-                            HStack(spacing:15){
+                            HStack(spacing:0){
                                 Group{
-                                    CompetitorScores(holeIndex: holeIndex+9, teamAssignment: .Indiv, totalType: .hole)
+                                    CompetitorScoresMatch(holeIndex: holeIndex+9, teamAssignment: .Indiv, totalType: .hole)
 //
                                 }
                                 .foregroundColor(.blue)
@@ -278,10 +264,10 @@ struct ScorecardScreenStroke: View {
                         switch currentGF.assignShotsRecd {
                             
                         case .Indiv:
-                            HStack(spacing: 15){
+                            HStack(spacing: 0){
                                 Group{
 
-                                    CompetitorScores(teamAssignment: .Indiv, totalType: .backNine)
+                                    CompetitorScoresMatch(teamAssignment: .Indiv, totalType: .backNine)
                                 }
                                 .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                             }
@@ -346,10 +332,10 @@ struct ScorecardScreenStroke: View {
                     // players fromt 9 totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 15){
+                        HStack(spacing: 0){
                             Group{
                                
-                                CompetitorScores(teamAssignment: .Indiv, totalType: .frontNine)
+                                CompetitorScoresMatch(teamAssignment: .Indiv, totalType: .frontNine)
                             }
                             .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }
@@ -411,10 +397,10 @@ struct ScorecardScreenStroke: View {
                     // players overall totals
                     switch currentGF.assignShotsRecd {
                     case .Indiv:
-                        HStack(spacing: 15){
+                        HStack(spacing: 0){
                             Group{
                                // CompetitorScores_IndivTotal(competitors: scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF))
-                                CompetitorScores(teamAssignment: .Indiv, totalType: .overall)
+                                CompetitorScoresMatch(teamAssignment: .Indiv, totalType: .overall)
                             }
                             .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
                         }
@@ -458,7 +444,7 @@ struct ScorecardScreenStroke: View {
                 .listRowBackground(totalsTeal)
                 
                 
-                HStack(spacing: 15){
+                HStack(spacing: 0){
                     Group{
                         ForEach(scoreEntryVM.currentGame.game.SortedCompetitors(currentGF: currentGF), id: \.self) {
                             Text($0.player?.Initials() ?? "")
@@ -480,12 +466,12 @@ struct ScorecardScreenStroke: View {
             
         }
     }
-}
+    }
 
-struct ScorecardScreenStroke_Previews: PreviewProvider {
+
+struct ScorecardScreenMatch_Previews: PreviewProvider {
     static var previews: some View {
-        
-        ScorecardScreenStroke()
+        ScorecardScreenMatch()
             .environmentObject(ScoreEntryViewModel())
             .environmentObject(CurrentGameFormat())
     }

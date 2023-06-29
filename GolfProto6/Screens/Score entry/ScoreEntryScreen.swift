@@ -13,7 +13,7 @@ struct ScoreEntryScreen: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showHoleNavigator: Bool = false
     @State private var isShowingDialogueCommitScores: Bool = false
-    @State private var isPresentedSheetScoreCard: Bool = false
+    @State private var isPresentedSheetScoreCardMatch: Bool = false
     @State private var isPresentedSheetScoreCardStroke: Bool = false
     @State private var needsRefresh: Bool = false
     
@@ -109,8 +109,8 @@ struct ScoreEntryScreen: View {
     
     
     
-    private var scoreCardButton: some View {
-        AnyView(Button(action: showScorecard){
+    private var scoreCardButtonMatch: some View {
+        AnyView(Button(action: showScorecardMatch){
             ZStack {
                 Image(systemName: "list.number")
                 Text("Match")
@@ -151,8 +151,8 @@ struct ScoreEntryScreen: View {
             
         })
     }
-    private func showScorecard () {
-        isPresentedSheetScoreCard.toggle()
+    private func showScorecardMatch () {
+        isPresentedSheetScoreCardMatch.toggle()
     }
     private func showScorecardStroke () {
         isPresentedSheetScoreCardStroke.toggle()
@@ -553,7 +553,7 @@ struct ScoreEntryScreen: View {
                 HStack{
                     if currentGF.playFormat == .matchplay {
                         scoreCardButtonStroke
-                        scoreCardButton
+                        scoreCardButtonMatch
                         
                     } else {
                         scoreCardButtonStrokeWithOutMatch
@@ -600,12 +600,12 @@ struct ScoreEntryScreen: View {
         
         
         
-        .sheet(isPresented: $isPresentedSheetScoreCard, onDismiss: {
+        .sheet(isPresented: $isPresentedSheetScoreCardMatch, onDismiss: {
             
            
         }, content: {
             // might need a switch here for different scorecards
-           ScorecardScreen()
+           ScorecardScreenMatch()
         })
         .sheet(isPresented: $isPresentedSheetScoreCardStroke, onDismiss: {
             

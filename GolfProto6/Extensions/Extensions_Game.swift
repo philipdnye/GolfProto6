@@ -998,7 +998,22 @@ extension Game {
     
 }
 
-
+extension Game {
+    func LowScoreByHole4BBB (holeIndex: Int) -> Int16 {
+        var lowScore: Int16 = 0
+        var scores: [Int16] = []
+        
+        for competitor in self.competitorArray{
+            if competitor.competitorScoresArray[holeIndex].NetScoreMatch() != 0{
+                scores.append(competitor.competitorScoresArray[holeIndex].NetScoreMatch())
+            }
+        }
+        lowScore = scores.min() ?? 0
+        
+        
+        return lowScore
+    }
+}
 
 
 
